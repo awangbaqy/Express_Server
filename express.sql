@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2018 at 08:25 AM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.8
+-- Generation Time: 03 Des 2018 pada 09.47
+-- Versi Server: 10.1.26-MariaDB
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -34,25 +34,40 @@ CREATE TABLE `kategori` (
   `harga` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `kategori`
+--
+
+INSERT INTO `kategori` (`id_kategori`, `jenis`, `harga`) VALUES
+(1, 'fast', 35000),
+(2, 'standard', 20000),
+(3, 'cheap', 10000);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paket`
+-- Struktur dari tabel `paket`
 --
 
 CREATE TABLE `paket` (
   `id_paket` int(11) NOT NULL,
   `nama_paket` varchar(50) NOT NULL,
   `berat` int(3) NOT NULL,
-  `ukuran` int(3) NOT NULL,
-  `id_user` int(11) NOT NULL,
+  `id_pengirim` int(11) NOT NULL,
   `id_pengiriman` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `paket`
+--
+
+INSERT INTO `paket` (`id_paket`, `nama_paket`, `berat`, `id_pengirim`, `id_pengiriman`) VALUES
+(1, 'Camera NIKON', 5, 2, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengirim`
+-- Struktur dari tabel `pengirim`
 --
 
 CREATE TABLE `pengirim` (
@@ -64,7 +79,7 @@ CREATE TABLE `pengirim` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pengirim`
+-- Dumping data untuk tabel `pengirim`
 --
 
 INSERT INTO `pengirim` (`id_user`, `nama`, `jenis_kelamin`, `alamat`, `hp`) VALUES
@@ -74,7 +89,7 @@ INSERT INTO `pengirim` (`id_user`, `nama`, `jenis_kelamin`, `alamat`, `hp`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengiriman`
+-- Struktur dari tabel `pengiriman`
 --
 
 CREATE TABLE `pengiriman` (
@@ -83,9 +98,17 @@ CREATE TABLE `pengiriman` (
   `tgl_keluar` date NOT NULL,
   `nama_penerima` varchar(35) NOT NULL,
   `alamat_penerima` varchar(30) NOT NULL,
+  `total_harga` int(15) NOT NULL,
   `status` varchar(10) NOT NULL,
   `id_kategori` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `pengiriman`
+--
+
+INSERT INTO `pengiriman` (`id_pengiriman`, `tgl_masuk`, `tgl_keluar`, `nama_penerima`, `alamat_penerima`, `total_harga`, `status`, `id_kategori`) VALUES
+(1, '2018-12-03', '2018-12-04', 'Amanda', 'Jl. Rose No.32 Bandung', 45000, 'dikirim', 1);
 
 --
 -- Indexes for dumped tables
@@ -102,7 +125,7 @@ ALTER TABLE `kategori`
 --
 ALTER TABLE `paket`
   ADD PRIMARY KEY (`id_paket`),
-  ADD UNIQUE KEY `id_user` (`id_user`);
+  ADD UNIQUE KEY `id_user` (`id_pengirim`);
 
 --
 -- Indexes for table `pengirim`
@@ -124,22 +147,26 @@ ALTER TABLE `pengiriman`
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `paket`
 --
 ALTER TABLE `paket`
-  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `pengirim`
 --
 ALTER TABLE `pengirim`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `pengiriman`
 --
 ALTER TABLE `pengiriman`
-  MODIFY `id_pengiriman` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `id_pengiriman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
