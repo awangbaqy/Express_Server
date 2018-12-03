@@ -2,7 +2,7 @@
 
 require APPPATH . '/libraries/REST_Controller.php';
 
-class Pembelian extends REST_Controller {
+class Pengiriman extends REST_Controller {
 
     function __construct($config = 'rest') {
         parent::__construct($config);
@@ -10,14 +10,12 @@ class Pembelian extends REST_Controller {
 
     // show data pembelian
     function index_get() {
-        $id_pembelian = $this->get('id_pembelian');
-        if ($id_pembelian == '') {
-            $pembeli = $this->db->get('pembelian')->result();
-        } else {
-            $this->db->where('id_pembelian', $id_pembelian);
-            $pembeli = $this->db->get('pembelian')->result();
-        }
-        $this->response($pembeli, 200);
+        $box = $this->get('box');
+        $search = $this->get('search');
+
+        $pengiriman = $this->Pengiriman_model->select($box, $search);
+        
+        $this->response($pengiriman, 200);
     }
 
     // insert new data to pembelian
