@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 03 Des 2018 pada 09.47
+-- Generation Time: 05 Des 2018 pada 17.01
 -- Versi Server: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -71,7 +71,7 @@ INSERT INTO `paket` (`id_paket`, `nama_paket`, `berat`, `id_pengirim`, `id_pengi
 --
 
 CREATE TABLE `pengirim` (
-  `id_user` int(11) NOT NULL,
+  `id_pengirim` int(11) NOT NULL,
   `nama` varchar(25) NOT NULL,
   `jenis_kelamin` varchar(15) NOT NULL,
   `alamat` varchar(30) NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE `pengirim` (
 -- Dumping data untuk tabel `pengirim`
 --
 
-INSERT INTO `pengirim` (`id_user`, `nama`, `jenis_kelamin`, `alamat`, `hp`) VALUES
+INSERT INTO `pengirim` (`id_pengirim`, `nama`, `jenis_kelamin`, `alamat`, `hp`) VALUES
 (1, 'Riza Awwalul', 'Laki- laki', 'Surabaya', '082550055588'),
 (2, 'Triska Intania', 'Perempuan', 'Malang', '082884145588');
 
@@ -131,7 +131,7 @@ ALTER TABLE `paket`
 -- Indexes for table `pengirim`
 --
 ALTER TABLE `pengirim`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id_pengirim`);
 
 --
 -- Indexes for table `pengiriman`
@@ -159,7 +159,7 @@ ALTER TABLE `paket`
 -- AUTO_INCREMENT for table `pengirim`
 --
 ALTER TABLE `pengirim`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pengirim` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pengiriman`

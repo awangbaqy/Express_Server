@@ -1,10 +1,6 @@
-<!--A Design by W3layouts
-  Author: W3layout
-  Author URL: http://w3layouts.com
-  License: Creative Commons Attribution 3.0 Unported
-  License URL: http://creativecommons.org/licenses/by/3.0/
-  -->
+
 <!DOCTYPE html>
+
 <html lang="zxx">
   <head>
     <title>Express | Package Delivery</title>
@@ -83,7 +79,7 @@
         </div>
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="hedder-up">
-            <h1 ><a href="index.html" class="navbar-brand" data-blast="color">Classwork</a></h1>
+            <h1 ><a href="index.html" class="navbar-brand" data-blast="color">ExpressDelivery</a></h1>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -92,13 +88,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
               <ul class="navbar-nav ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a href="#about" class="nav-link scroll" >About</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#blog" class="nav-link scroll">Blog</a>
                 </li>
                 <li class="nav-item">
                   <a href="#team" class="nav-link scroll">Team</a>
@@ -107,7 +100,7 @@
                   <a href="#stats" class="nav-link scroll">Stats</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#contact" class="nav-link scroll">Contact</a>
+                  <a href="#contact" class="nav-link scroll">Search</a>
                 </li>
               </ul>
             </div>
@@ -125,12 +118,11 @@
               <div class="slider-img one-img">
                 <div class="container">
                   <div class="slider-info text-left">
-                    <h4 >Hard Work</h4>
-                    <h5>Lorem ipsum dolor</h5>
-                    <p>velit sagittis vehicula
-                    </p>
+                    <img src="assets/images/admin.png" style="width:80px; height:80px;">
+                    <h4>Admin</h4>
+                    <h5>Delivery Express</h5><br>
                     <div class="outs_more-buttn" >
-                      <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">More</a>
+                      <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">Login</a>
                     </div>
                   </div>
                 </div>
@@ -140,12 +132,11 @@
               <div class="slider-img two-img">
                 <div class="container">
                   <div class="slider-info text-left">
-                    <h4>Study</h4>
-                    <h5>Tempo Dolor Lorem</h5>
-                    <p>velit sagittis vehicula
-                    </p>
+                    <img src="assets/images/admin.png" style="width:80px; height:80px;">
+                    <h4>Admin</h4>
+                    <h5>Delivery Express</h5><br>
                     <div class="outs_more-buttn">
-                      <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">More</a>
+                      <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">Login</a>
                     </div>
                   </div>
                 </div>
@@ -155,12 +146,11 @@
               <div class="slider-img three-img">
                 <div class="container">
                   <div class="slider-info text-left">
-                    <h4>Class</h4>
-                    <h5>Ipsum Dolor Eiusmo</h5>
-                    <p>velit sagittis vehicula
-                    </p>
+                    <img src="assets/images/admin.png" style="width:80px; height:80px;">
+                    <h4>Admin</h4>
+                    <h5>Delivery Express</h5><br>
                     <div class="outs_more-buttn">
-                      <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">More</a>
+                      <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">Login</a>
                     </div>
                   </div>
                 </div>
@@ -182,7 +172,7 @@
         <div class="main row ">
           <!-- TENTH EXAMPLE -->
           <div class="col-lg-4 view view-tenth">
-            <img src="images/ab1.jpg" alt="" class="img-fluid">
+            <img src="assets/images/logo.jpg" alt="" class="img-fluid">
             <div class="mask">
               <h3 data-blast="bgColor">Success</h3>
               <p>Vivamus sed poritor felis.ntesque habitant morbi senectus et netus</p>
@@ -544,7 +534,7 @@
           <div class="col-lg-3 col-md-6 col-sm-6 profile">
             <div class="team-shadow">
               <div class="img-box">
-                <img src="images/t1.jpg" alt="">
+                <img src="assets/images/t3.jpg" alt="">
                 <div class="list-social-icons">
                   <ul>
                     <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
@@ -555,15 +545,15 @@
                 </div>
               </div>
               <div class="team-w3layouts-info py-lg-4 py-3 text-center" data-blast="bgColor">
-                <h4 class="text-white mb-2">Rox Will</h4>
-                <span class="wls-client-title text-black">Professor</span>
+                <h4 class="text-white mb-2">Riza Awwalul Baqy</h4>
+                <span class="wls-client-title text-black">Developer</span>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 profile">
+          <div class="col-lg-3 col-md-4 col-sm-6 profile">
             <div class="team-shadow">
               <div class="img-box">
-                <img src="images/t2.jpg" alt="">
+                <img src="assets/images/t3.jpg" alt="">
                 <div class="list-social-icons">
                   <ul>
                     <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
@@ -574,52 +564,15 @@
                 </div>
               </div>
               <div class="team-w3layouts-info py-lg-4 py-3 text-center" data-blast="bgColor">
-                <h4 class="text-white mb-2">Sam Doi</h4>
-                <span class="wls-client-title text-black">Professor</span>
+                <h4 class="text-white mb-2">Triska Intania Sulistiyowati</h4>
+                <span class="wls-client-title text-black">Developer</span>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 profile">
-            <div class="team-shadow">
-              <div class="img-box">
-                <div class="team-list-img">
-                  <img src="images/t3.jpg" alt="">
-                </div>
-                <div class="list-social-icons">
-                  <ul>
-                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                    <li><a href="#"><span class="fas fa-envelope"></span></a></li>
-                    <li><a href="#"><span class="fas fa-rss"></span></a></li>
-                    <li><a href="#"><span class="fab fa-vk"></span></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="team-w3layouts-info py-lg-4 py-3 text-center" data-blast="bgColor">
-                <h4 class="text-white mb-2">Kent Kelly</h4>
-                <span class="wls-client-title text-black">Professor</span>
-              </div>
-            </div>
+          
+              
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 profile">
-            <div class="team-shadow">
-              <div class="img-box">
-                <div class="team-list-img">
-                  <img src="images/t4.jpg" alt="">
-                </div>
-                <div class="list-social-icons">
-                  <ul>
-                    <li><a href="#"><span class="fab fa-facebook-f" ></span></a></li>
-                    <li><a href="#"><span class="fas fa-envelope"></span></a></li>
-                    <li><a href="#"><span class="fas fa-rss"></span></a></li>
-                    <li><a href="#"><span class="fab fa-vk"></span></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="team-w3layouts-info py-lg-4 py-3 text-center" data-blast="bgColor">
-                <h4 class="text-white mb-2">Kent Kelly</h4>
-                <span class="wls-client-title text-black">Professor</span>
-              </div>
-            </div>
+          
           </div>
         </div>
       </div>
@@ -628,7 +581,6 @@
     <!--contact -->
     <section class="contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
       <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
-        <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Contact Us</h3>
         <div class="row">
           <div class="col-md-5 address-grid">
             <div class="addres-office-hour text-center" >
@@ -637,7 +589,7 @@
                   <h6 data-blast="color">Address</h6>
                 </li>
                 <li>
-                  <p>Melbourne,south Brisbane,<br>QLD 4101,Aurstralia.</p>
+                  <p>Jl. Soekarno Hatta Malang<br>Jawa Timur, Indonesia.</p>
                 </li>
               </ul>
               <ul>
@@ -645,33 +597,29 @@
                   <h6 data-blast="color">Phone</h6>
                 </li>
                 <li class="mt-2">
-                  <p>+ 1 (234) 567 8901</p>
+                  <p>(0341) 555 0088</p>
                 </li>
                 <li class="mt-lg-4 mt-3">
                   <h6 data-blast="color">Email</h6>
                 </li>
                 <li class="mt-2">
-                  <p><a href="mailto:info@example.com">info@example.com</a></p>
+                  <p><a href="mailto:info@example.com">express@example.com</a></p>
                 </li>
               </ul>
             </div>
           </div>
           <div class="col-md-7 contact-form">
+          <br>
+          <br>
+          <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Mengecek Paket</h3>
             <form action="#" method="post">
               <div class="row text-center contact-wls-detail">
-                <div class="col-md-6 form-group contact-forms">
-                  <input type="text" class="form-control" placeholder="Your Name" required="">
-                </div>
-                <div class="col-md-6 form-group contact-forms">
-                  <input type="email" class="form-control" placeholder="Your Email" required="">
-                </div>
+                
               </div>
               <div class="form-group contact-forms">
-                <input type="text" class="form-control" placeholder="Subject" required="">
+                <input type="text" class="form-control" placeholder="ID Pengirim" required="">
               </div>
-              <div class="form-group contact-forms">
-                <textarea class="form-control" rows="3" placeholder="Your Message" required=""></textarea>
-              </div>
+              
               <div class="sent-butnn text-center">
                 <button type="submit" class="btn btn-block" data-blast="bgColor">Send</button>
               </div>
@@ -858,28 +806,40 @@
     </footer>
     <!--//footer-->
     <!--model-->
+    
     <div id="exampleModalLive" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="exampleModalLiveLabel" data-blast="color">ClassWork</h4>
+            <h4 class="modal-title" id="exampleModalLiveLabel" data-blast="color">Login Admin</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
           </div>
+          <form action="<?php echo site_url('admin') ?>" method="post" id="forum">
           <div class="modal-body">
             <img src="images/b2.jpg" alt="" class="img-fluid">
-            <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
-              eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellu
+            <p>
+              <input class="form-control" type="text" id="user" name="user"
+								pattern="^[^\s]+$" required title="Harap diisi dengan benar"
+								placeholder="Masukkan Email ...">
+                <br>
+							<input class="form-control" type="password" id="pass" name="pass"
+								pattern="^[^\s]+$" required title="Harap diisi dengan benar"
+								placeholder="Masukkan Password ...">
             </p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <a href="<?php echo site_url('admin') ?>" type="submit" class="btn btn-primary">Login</a>
+            <input type="submit" class="btn btn-primary" value="Login" />
           </div>
+          </form>
         </div>
       </div>
     </div>
+    
     <!--//model-->
     <!--js working-->
     <script src='assets/js/jquery-2.2.3.min.js'></script>

@@ -35,7 +35,7 @@ $config['base_url'] = 'localhost:8080/Express_Server';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------
