@@ -4,22 +4,22 @@
 		<title>Halaman Admin</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- jQuery UI -->
-		<link href="<?php echo base_url()?>assets/admin/js/jquery-ui.css" rel="stylesheet" media="screen">
+		<link href="<?php echo base_url()?>assets/admin/css/jquery-ui.css" rel="stylesheet" media="screen">
 		<!-- Bootstrap -->
 		<link href="<?php echo base_url()?>assets/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<!-- styles -->
 		<link href="<?php echo base_url()?>assets/admin/css/styles.css" rel="stylesheet">
 
 		<!-- CSS Editor -->
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/')?>vendors/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css"></link>
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/admin/')?>vendors/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css"></link>
 
 		<!-- CSS Form -->
-		<link href="<?php echo base_url('assets/')?>css/fontawesome.css" rel="stylesheet">
-		<link href="<?php echo base_url('assets/')?>vendors/form-helpers/css/bootstrap-formhelpers.min.css" rel="stylesheet">
-		<link href="<?php echo base_url('assets/')?>vendors/select/bootstrap-select.min.css" rel="stylesheet">
-		<link href="<?php echo base_url('assets/')?>vendors/tags/css/bootstrap-tags.css" rel="stylesheet">
+		<link href="<?php echo base_url('assets/admin/')?>css/fontawesome.css" rel="stylesheet">
+		<link href="<?php echo base_url('assets/admin/')?>vendors/form-helpers/css/bootstrap-formhelpers.min.css" rel="stylesheet">
+		<link href="<?php echo base_url('assets/admin/')?>vendors/select/bootstrap-select.min.css" rel="stylesheet">
+		<link href="<?php echo base_url('assets/admin/')?>vendors/tags/css/bootstrap-tags.css" rel="stylesheet">
 
-		<link href="<?php echo base_url('assets/')?>css/forms.css" rel="stylesheet">
+		<link href="<?php echo base_url('assets/admin/')?>css/forms.css" rel="stylesheet">
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -248,28 +248,28 @@
 <?php $this->load->view('admin/footer') ?>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="<?php echo base_url('assets/')?>js/jquery.js"></script>
-		<script src="<?php echo base_url('assets/js/jquery-3.3.1.min.js') ?>"></script>
+		<script src="<?php echo base_url('assets/admin/')?>js/jquery.js"></script>
+		<script src="<?php echo base_url('assets/admin/js/jquery-3.3.1.min.js') ?>"></script>
 		<!-- jQuery UI -->
-		<script src="<?php echo base_url('assets/')?>js/jquery-ui.js"></script>
+		<script src="<?php echo base_url('assets/admin/')?>js/jquery-ui.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="<?php echo base_url('assets/')?>bootstrap/js/bootstrap.min.js"></script>
-		<script src="<?php echo base_url('assets/')?>js/custom.js"></script>
+		<script src="<?php echo base_url('assets/admin/')?>bootstrap/js/bootstrap.min.js"></script>
+		<script src="<?php echo base_url('assets/admin/')?>js/custom.js"></script>
 
 		<!-- JS Form -->
-		<script src="<?php echo base_url('assets/')?>vendors/select/bootstrap-select.min.js"></script>
+		<script src="<?php echo base_url('assets/admin/')?>vendors/select/bootstrap-select.min.js"></script>
 
-		<script src="<?php echo base_url('assets/')?>vendors/tags/js/bootstrap-tags.min.js"></script>
+		<script src="<?php echo base_url('assets/admin/')?>vendors/tags/js/bootstrap-tags.min.js"></script>
 
-		<script src="<?php echo base_url('assets/')?>vendors/mask/jquery.maskedinput.min.js"></script>
+		<script src="<?php echo base_url('assets/admin/')?>vendors/mask/jquery.maskedinput.min.js"></script>
 
-		<script src="<?php echo base_url('assets/')?>vendors/moment/moment.min.js"></script>
+		<script src="<?php echo base_url('assets/admin/')?>vendors/moment/moment.min.js"></script>
 
-		<script src="<?php echo base_url('assets/')?>vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
+		<script src="<?php echo base_url('assets/admin/')?>vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
 
-		<link href="<?php echo base_url('assets/')?>css/bootstrap-editable.css" rel="stylesheet"/>
-		<script src="<?php echo base_url('assets/')?>js/bootstrap-editable.min.js"></script>
+		<link href="<?php echo base_url('assets/admin/')?>css/bootstrap-editable.css" rel="stylesheet"/>
+		<script src="<?php echo base_url('assets/admin/')?>js/bootstrap-editable.min.js"></script>
 
-		<script src="<?php echo base_url('assets/')?>js/forms.js"></script>
+		<script src="<?php echo base_url('assets/admin/')?>js/forms.js"></script>
   	</body>
 </html>
