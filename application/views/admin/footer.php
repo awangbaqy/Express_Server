@@ -4,7 +4,9 @@
         <div class="copy text-center">
             .: <a href='<?php echo site_url('home/') ?>'>Express Delivery</a> :.
             <p>
-                Designed by Riza Awwalul Baqy & Triska Intania Sulistiyowati
+                Designed by 
+                <br>
+                Riza Awwalul Baqy || Triska Intania Sulistiyowati
             </p>
         </div>
         

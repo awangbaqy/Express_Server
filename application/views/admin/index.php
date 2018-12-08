@@ -28,11 +28,10 @@
 					<ul class="nav">
                     	<!-- Main menu -->
                     	<li class="current"><a href="<?php echo site_url('admin/') ?>"><i class="glyphicon glyphicon-home"></i> Beranda</a></li>
-						<li><a href="<?php echo site_url('admin/kategori') ?>"><i class="glyphicon glyphicon-list"></i> Kategori</a></li>
-						<li><a href="<?php echo site_url('admin/paket') ?>"><i class="glyphicon glyphicon-lock"></i> Paket</a></li>
-						<li><a href="<?php echo site_url('admin/pengirim') ?>"><i class="glyphicon glyphicon-user"></i> Pengirim</a></li>
-						<li><a href="<?php echo site_url('admin/pengiriman') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>
-						<li><a href="<?php echo site_url('admin/transact') ?>"><i class="glyphicon glyphicon-credit-card"></i> Transaksi</a></li>
+						<li><a href="<?php echo site_url('DataKategori/show') ?>"><i class="glyphicon glyphicon-list"></i> Kategori</a></li>
+						<li><a href="<?php echo site_url('DataPaket/show') ?>"><i class="glyphicon glyphicon-lock"></i> Paket</a></li>
+						<li><a href="<?php echo site_url('DataPengirim/show') ?>"><i class="glyphicon glyphicon-user"></i> Pengirim</a></li>
+						<li><a href="<?php echo site_url('DataPengiriman/show') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>
                 	</ul>
              	</div>
 				<div class="sidebar content-box" style="display: block;">
