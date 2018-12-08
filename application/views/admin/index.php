@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<!-- Bootstrap -->
-		<link href="<?php echo base_url('assets/')?>bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="<?php echo base_url()?>assets/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<!-- styles -->
-		<link href="<?php echo base_url('assets/')?>css/styles.css" rel="stylesheet">
+		<link href="<?php echo base_url()?>assets/css/css/styles.css" rel="stylesheet">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,13 +25,13 @@
 
 		  	<div class="col-md-2">
 		  		<div class="sidebar content-box" style="display: block;">
-                	<ul class="nav">
+					<ul class="nav">
                     	<!-- Main menu -->
                     	<li class="current"><a href="<?php echo site_url('admin/') ?>"><i class="glyphicon glyphicon-home"></i> Beranda</a></li>
-						<li><a href="<?php echo site_url('admin/camera') ?>"><i class="glyphicon glyphicon-camera"></i> Kamera</a></li>
-						<li><a href="<?php echo site_url('admin/category') ?>"><i class="glyphicon glyphicon-list"></i> Kategori</a></li>
-						<li><a href="<?php echo site_url('admin/brand') ?>"><i class="glyphicon glyphicon-copyright-mark"></i> Merek</a></li>
-						<li><a href="<?php echo site_url('admin/user') ?>"><i class="glyphicon glyphicon-user"></i> Pengguna</a></li>
+						<li><a href="<?php echo site_url('admin/kategori') ?>"><i class="glyphicon glyphicon-list"></i> Kategori</a></li>
+						<li><a href="<?php echo site_url('admin/paket') ?>"><i class="glyphicon glyphicon-lock"></i> Paket</a></li>
+						<li><a href="<?php echo site_url('admin/pengirim') ?>"><i class="glyphicon glyphicon-user"></i> Pengirim</a></li>
+						<li><a href="<?php echo site_url('admin/pengiriman') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>
 						<li><a href="<?php echo site_url('admin/transact') ?>"><i class="glyphicon glyphicon-credit-card"></i> Transaksi</a></li>
                 	</ul>
              	</div>

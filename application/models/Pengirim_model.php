@@ -3,8 +3,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pengirim_model extends CI_Model 
 {
-    public function select($id=null)
+    //show
+    public function getPengirim()
     {
-        
+        $query = $this->db->get('pengirim');
+        if($query->num_rows()>0){
+            return $query->result();
+        }
+    }
+
+    //create (POST)
+    public function postPengirim()
+    {
+        return $this->db->insert('pengirim',$data);
+    }
+
+    //update (PUT)
+    public function putPengirim()
+    {
+        $this->db->where('id_pengirim', $id_pengirim);
+        $this->db->update('pengirim', $data);
+    }
+
+    //delete (DELETE)
+    public function deletePengirim()
+    {
+        $this->db->where('id_pengirim', $id_pengirim);
+        $this->db->delete('pengirim');
     }
 }

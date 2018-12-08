@@ -8,7 +8,7 @@ class Pengiriman extends REST_Controller {
         parent::__construct($config);
     }
 
-    // show data pembelian
+    // show data pengiriman
     function index_get() {
         $box = $this->get('box');
         $search = $this->get('search');
@@ -18,33 +18,33 @@ class Pengiriman extends REST_Controller {
         $this->response($pengiriman, 200);
     }
 
-    // insert new data to pembelian
+    // insert new data to pengiriman
     function index_post() {
         $data = array(
-            'id_pembelian'   => $this->post('id_pembelian'),
+            'id_pengiriman'   => $this->post('id_pengiriman'),
             'id_pembeli'     => $this->post('id_pembeli'),
             'tanggal_beli'   => $this->post('tanggal_beli'),
             'total_harga'    => $this->post('total_harga'),
             'id_tiket'       => $this->post('id_tiket'));
-        $insert = $this->db->insert('pembelian', $data);
-        if ($insert) {
+        
+        if ($this->Pengirim_model->postPengirim($data)) {
             $this->response($data, 200);
         } else {
             $this->response(array('status' => 'fail', 502));
         }
     }
 
-    // update data pembelian
+    // update data pengiriman
     function index_put() {
-        $id_pembelian = $this->put('id_pembelian');
+        $id_pengiriman = $this->put('id_pengiriman');
         $data = array(
-            'id_pembelian'   => $this->put('id_pembelian'),
+            'id_pengiriman'   => $this->put('id_pengiriman'),
             'id_pembeli'     => $this->put('id_pembeli'),
             'tanggal_beli'   => $this->put('tanggal_beli'),
             'total_harga'    => $this->put('total_harga'),
             'id_tiket'       => $this->put('id_tiket'));
-        $this->db->where('id_pembelian', $id_pembelian);
-        $update = $this->db->update('pembelian', $data);
+        $this->db->where('id_pengiriman', $id_pengiriman);
+        $update = $this->db->update('pengiriman', $data);
         if ($update) {
             $this->response($data, 200);
         } else {
@@ -52,11 +52,11 @@ class Pengiriman extends REST_Controller {
         }
     }
 
-    // delete pembelian
+    // delete pengiriman
     function index_delete() {
-        $id_pembelian = $this->delete('id_pembelian');
-        $this->db->where('id_pembelian', $id_pembelian);
-        $delete = $this->db->delete('pembelian');
+        $id_pengiriman = $this->delete('id_pengiriman');
+        $this->db->where('id_pengiriman', $id_pengiriman);
+        $delete = $this->db->delete('pengiriman');
         if ($delete) {
             $this->response(array('status' => 'success'), 201);
         } else {

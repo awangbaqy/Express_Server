@@ -4,7 +4,7 @@
             <div class="col-md-10">
                 <!-- Logo -->
                 <div class="logo">
-                    <h1><a href="<?php echo site_url('admin/') ?>">Admin Toko Kamera</a></h1>
+                    <h1><a href="<?php echo site_url('admin/') ?>">Admin | ExpressDelivery</a></h1>
                 </div>
             </div>
             <div class="col-md-2">
@@ -12,11 +12,18 @@
                     <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
+                                <a>Logout</a>
+                            </li>
+                        </ul>
+
+                        <!-- <ul class="nav navbar-nav">
+                            <li class="dropdown">
                             <?php if($this->session->status=='Logged') { ?>
                                 <a href="<?php echo site_url('log/logout') ?>">Keluar</a>
                             <?php } ?>
                             </li>
-                        </ul>
+                        </ul> -->
+                        
                     </nav>
                 </div>
             </div>

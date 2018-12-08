@@ -531,7 +531,7 @@
       <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
         <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Our Staff </h3>
         <div class="row ">
-          <div class="col-lg-3 col-md-6 col-sm-6 profile">
+          <div class="col-lg-2 col-md-2 col-sm-2 profile">
             <div class="team-shadow">
               <div class="img-box">
                 <img src="assets/images/t3.jpg" alt="">
@@ -550,7 +550,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 profile">
+          <div class="col-lg-2 col-md-2 col-sm-2 profile">
             <div class="team-shadow">
               <div class="img-box">
                 <img src="assets/images/t3.jpg" alt="">
@@ -816,9 +816,9 @@
             <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form action="<?php echo site_url('admin') ?>" method="post" id="forum">
+          <form action="<?php echo site_url('admin/login') ?>" method="post" id="forum">
           <div class="modal-body">
-            <img src="images/b2.jpg" alt="" class="img-fluid">
+            <img src="assets/images/logo.jpg" alt="" class="img-fluid">
             <p>
               <input class="form-control" type="text" id="user" name="user"
 								pattern="^[^\s]+$" required title="Harap diisi dengan benar"
