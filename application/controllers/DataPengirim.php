@@ -22,9 +22,9 @@ class DataPengirim extends CI_Controller {
             'hp' => $this->input->post('hp')
             ];
         
-        if ($this->Pengirim_model->insert($data))
+        if ($this->Pengirim_model->postPengirim($data))
         {
-            redirect('admin/pengirim');
+            redirect('DataPengirim/show');
         }
         else
         { $this->load->view('admin/pengirim', $data); }

@@ -108,7 +108,7 @@
                 <fieldset>
                     <div class="form-group">
                         <label for="Name">Nama Pengirim :</label>
-                        <input type="text" class="form-control" id="name" name="name"
+                        <input type="text" class="form-control" id="nama" name="nama"
                             pattern="^[^-\s][a-zA-Z_\s-]{1,50}" required title="Harap diisi dengan huruf"
                             placeholder="Masukkan nama ...">  
                     </div>
@@ -123,8 +123,8 @@
                         <label for="Alamat">Alamat :</label>
                         <textarea type="text" class="form-control" id="alamat" name="alamat"
                             pattern="{1,1000}" required title="Harap diisi"
-                            placeholder="Masukkan alamat ...">  
-                        </textarea>
+                            placeholder="Masukkan alamat ...">
+						</textarea>
                     </div>
                     <div class="form-group">
                         <label for="hp">No. HP :</label>
@@ -205,7 +205,7 @@
                     </div>
                     <div class="form-group">
                         <label for="hp">No. HP :</label>
-                        <input type="number" class="form-control" id="hp" name="hp"
+                        <input type="text" class="form-control" id="hp" name="hp"
                             pattern="[0-9]{1,15}" required title="Harap diisi dengan angka"
                             placeholder="Masukkan nomer handphone ...">  
                     </div>

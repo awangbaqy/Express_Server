@@ -13,7 +13,7 @@ class Pengirim_model extends CI_Model
     }
 
     //create (POST)
-    public function postPengirim()
+    public function postPengirim($data)
     {
         return $this->db->insert('pengirim',$data);
     }

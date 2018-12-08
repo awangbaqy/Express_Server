@@ -13,7 +13,7 @@ class Pengiriman extends REST_Controller {
         $box = $this->get('box');
         $search = $this->get('search');
 
-        $pengiriman = $this->Pengiriman_model->select($box, $search);
+        $pengiriman = $this->Pengiriman_model->getPengiriman($box, $search);
         
         $this->response($pengiriman, 200);
     }
