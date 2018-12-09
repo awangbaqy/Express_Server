@@ -821,19 +821,17 @@
             <img src="assets/images/logo.jpg" alt="" class="img-fluid">
             <p>
               <input class="form-control" type="text" id="user" name="user"
-								pattern="^[^\s]+$" required title="Harap diisi dengan benar"
-								placeholder="Masukkan Email ...">
+                    pattern="^[^\s]+$" required title="Harap diisi dengan benar"
+                    placeholder="Masukkan Username ...">
                 <br>
-							<input class="form-control" type="password" id="pass" name="pass"
-								pattern="^[^\s]+$" required title="Harap diisi dengan benar"
-								placeholder="Masukkan Password ...">
+            <input class="form-control" type="password" id="pass" name="pass"
+                pattern="^[^\s]+$" required title="Harap diisi dengan benar"
+                placeholder="Masukkan Password ...">
             </p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             <button type="submit" class="btn btn-primary">Login</button>
-            <a href="<?php echo site_url('admin') ?>" type="submit" class="btn btn-primary">Login</a>
-            <input type="submit" class="btn btn-primary" value="Login" />
           </div>
           </form>
         </div>
