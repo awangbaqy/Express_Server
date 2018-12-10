@@ -26,7 +26,7 @@
     <link href="assets/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
     <!-- //font-awesome icons -->
     <link href="assets/css/blast.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/style10.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style10.css" />
     <!--stylesheets-->
     <link href="assets/css/style.css" rel='stylesheet' type='text/css' media="all">
     <!--//stylesheets-->
@@ -97,7 +97,7 @@
                   <a href="#team" class="nav-link scroll">Team</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#stats" class="nav-link scroll">Stats</a>
+                  <a href="#service" class="nav-link scroll">Services</a>
                 </li>
                 <li class="nav-item">
                   <a href="#contact" class="nav-link scroll">Search</a>
@@ -180,7 +180,7 @@
             </div>
           </div>
           <div class="col-lg-4 view view-tenth">
-            <img src="images/ab2.jpg" alt="" class="img-fluid">
+            <img src="assets/images/ab2.jpg" alt="" class="img-fluid">
             <div class="mask">
               <h3 data-blast="bgColor">Hard Work</h3>
               <p>Vivamus sed poritor felis.ntesque habitant morbi senectus et netus</p>
@@ -188,7 +188,7 @@
             </div>
           </div>
           <div class="col-lg-4 view view-tenth">
-            <img src="images/ab3.jpg" alt="" class="img-fluid">
+            <img src="assets/images/ab3.jpg" alt="" class="img-fluid">
             <div class="mask">
               <h3 data-blast="bgColor">Admission</h3>
               <p>Vivamus sed poritor felis.ntesque habitant morbi senectus et netus</p>
@@ -203,8 +203,7 @@
         <!--Horizontal Tab-->
         <div id="horizontalTab">
           <ul class="resp-tabs-list justify-content-center">
-            <li data-blast="bgColor">Course</li>
-            <li data-blast="bgColor">Academics</li>
+            <li data-blast="bgColor">About</li>
             <li data-blast="bgColor">Admission</li>
             <li data-blast="bgColor">Mission</li>
           </ul>
@@ -213,20 +212,20 @@
               <div class="row mt-lg-4 mt-3">
                 <div class="col-md-7 latest-list">
                   <div class="about-jewel-agile-left">
-                    <h4 class="mb-3" data-blast="color">Dolor sit </h4>
+                    <h4 class="mb-3" data-blast="color">Express Delivery </h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque</p>
                     <h5 data-blast="color"> Who we are</h5>
                   </div>
                 </div>
                 <div class="col-md-5 about-txt-img">
-                  <img src="images/ab1.jpg" class="img-thumbnail" alt="">
+                  <img src="assets/images/logo.jpg" class="img-thumbnail" alt="">
                 </div>
               </div>
             </div>
             <div class="tab2">
               <div class="row mt-lg-4 mt-3">
                 <div class="col-md-5 about-txt-img">
-                  <img src="images/ab3.jpg" class="img-thumbnail" alt="">
+                  <img src="assets/images/ab3.jpg" class="img-thumbnail" alt="">
                 </div>
                 <div class="col-md-7 latest-list">
                   <div class="about-jewel-agile-left">
@@ -278,66 +277,69 @@
           <div class="col-lg-4 col-md-6 col-sm-6 w3layouts-service-list text-center">
             <div class="white-shadow">
               <div class="text-wls-ser-bake">
-                <span class="fas fa-book banner-icon" data-blast="color"></span>
+                <!--service ECONOMY-->
+                <span class="fas fa-address-book banner-icon" data-blast="color"></span>
               </div>
               <div class="ser-inner-info">
-                <h4 class="my-3">Lorem ipsum</h4>
-                <p>delectus reiciendis maiores alias consequatur aut.maiores alias</p>
+                <h4 class="my-3">Economy</h4>
+                <p>jenis layanan pengiriman ekonomi</p>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 w3layouts-service-list text-center">
             <div class="white-shadow">
               <div class="text-wls-ser-bake">
-                <span class="fas fa-pencil-alt banner-icon" data-blast="color"></span>
+                <!--service STANDARD-->
+                <span class="fas fa-book banner-icon" data-blast="color"></span>
               </div>
               <div class="ser-inner-info">
-                <h4 class="my-3">Lorem ipsum</h4>
-                <p>delectus reiciendis maiores alias consequatur aut.maiores alias</p>
+                <h4 class="my-3">Standard</h4>
+                <p>jenis layanan pengiriman biasa</p>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 w3layouts-service-list text-center">
+            <div class="white-shadow">
+              <div class="text-wls-ser-bake">
+                <!--service FAST-->
+                <span class="fab fa-cloudscale banner-icon" data-blast="color"></span>
+              </div>
+              <div class="ser-inner-info">
+                <h4 class="my-3">Fast</h4>
+                <p>jenis layanan pengiriman cepat</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 w3layouts-service-list text-center mt-md-4 mt-sm-3 mt-3">
             <div class="white-shadow">
               <div class="text-wls-ser-bake">
                 <span class="fas fa-bookmark banner-icon" data-blast="color"></span>
               </div>
               <div class="ser-inner-info">
-                <h4 class="my-3">Lorem ipsum</h4>
-                <p>delectus reiciendis maiores alias consequatur aut.maiores alias</p>
+                <h4 class="my-3">5 hari</h4>
+                <p>Harga pengiriman = Rp.10.000,00</p>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 w3layouts-service-list text-center mt-md-4 mt-sm-3 mt-3">
             <div class="white-shadow">
               <div class="text-wls-ser-bake">
-                <span class="fas fa-address-book banner-icon" data-blast="color"></span>
+                <span class="fas fa-bookmark banner-icon" data-blast="color"></span>
               </div>
               <div class="ser-inner-info">
-                <h4 class="my-3">Lorem ipsum</h4>
-                <p>delectus reiciendis maiores alias consequatur aut.maiores alias</p>
+                <h4 class="my-3">3 hari</h4>
+                <p>Harga pengiriman = Rp.20.000,00</p>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 w3layouts-service-list text-center mt-md-4 mt-sm-3 mt-3">
             <div class="white-shadow">
               <div class="text-wls-ser-bake">
-                <span class="fas fa-graduation-cap banner-icon" data-blast="color"></span>
+                <span class="fas fa-bookmark banner-icon" data-blast="color"></span>
               </div>
               <div class="ser-inner-info">
-                <h4 class="my-3">Lorem ipsum</h4>
-                <p>delectus reiciendis maiores alias consequatur aut.maiores alias</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 w3layouts-service-list text-center mt-md-4 mt-sm-3 mt-3">
-            <div class="white-shadow">
-              <div class="text-wls-ser-bake">
-                <span class="fab fa-cloudscale banner-icon" data-blast="color"></span>
-              </div>
-              <div class="ser-inner-info">
-                <h4 class="my-3">Lorem ipsum</h4>
-                <p>delectus reiciendis maiores alias consequatur aut.maiores alias</p>
+                <h4 class="my-3">1 hari</h4>
+                <p>Harga pengiriman = Rp.35.000,00</p>
               </div>
             </div>
           </div>
@@ -352,7 +354,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex">
             <div class="clients-color">
-              <img src="images/ab3.jpg" class="img-fluid" alt="">
+              <img src="assets/images/ab3.jpg" class="img-fluid" alt="">
               <div class="blog-txt-info">
                 <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Quisque a rhoncus </a></h4>
                 <div class="news-date my-3">
@@ -404,60 +406,9 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex mt-lg-5 mt-md-4 mt-sm-3 mt-3">
-            <div class="clients-color">
-              <img src="images/ab3.jpg" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Quisque a rhoncus </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    <li class="mr-3"><span class="far fa-calendar-check"></span><a href="#" data-toggle="modal" data-target="#exampleModalLive" >12/4/2019</a></li>
-                    <li><span class="far fa-comments"></span><a href="#" data-toggle="modal" data-target="#exampleModalLive" >5 Comments</a></li>
-                  </ul>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex mt-lg-5 mt-md-4 mt-sm-3 mt-3" >
-            <div class="clients-color">
-              <img src="images/ab1.jpg" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Quisque a rhoncus </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    <li class="mr-3"><span class="far fa-calendar-check"></span><a href="#" data-toggle="modal" data-target="#exampleModalLive">12/4/2019</a></li>
-                    <li><span class="far fa-comments"></span><a href="#" data-toggle="modal" data-target="#exampleModalLive">5 Comments</a></li>
-                  </ul>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex mt-lg-5 mt-md-4 mt-sm-3 mt-3">
-            <div class="clients-color">
-              <img src="images/ab2.jpg" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Quisque a rhoncus </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    <li class="mr-3"><span class="far fa-calendar-check"></span><a href="#" data-toggle="modal" data-target="#exampleModalLive">12/4/2019</a></li>
-                    <li><span class="far fa-comments"></span><a href="#" data-toggle="modal" data-target="#exampleModalLive">5 Comments</a></li>
-                  </ul>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">More</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
+          
+          
         </div>
       </div>
     </section>
@@ -637,7 +588,7 @@
             <h4 class="pb-lg-3 pb-3" data-blast="color">Blog</h4>
             <div class="footer-grid row mb-3">
               <div class="col-lg-5 col-md-6 col-sm-6 col-5">
-                <img src="images/bb1.jpg" alt=" " class="img-fluid">
+                <img src="assets/images/bb1.jpg" alt=" " class="img-fluid">
               </div>
               <div class="col-lg-7 col-md-6 col-sm-6 col-7 bottom-para px-0">
                 <h6><a href="#" data-toggle="modal" data-target="#exampleModalLive">ultricies nec,pellen eu,pretium quis,</a></h6>
@@ -651,7 +602,7 @@
             </div>
             <div class="footer-grid row mb-3">
               <div class="col-lg-5 col-md-6 col-sm-6 col-5">
-                <img src="images/bb2.jpg" alt=" " class="img-fluid">
+                <img src="assets/images/bb2.jpg" alt=" " class="img-fluid">
               </div>
               <div class="col-lg-7 col-md-6 col-sm-6 col-7 bottom-para px-0">
                 <h6><a href="#" data-toggle="modal" data-target="#exampleModalLive">ultricies nec,pellen eu,pretium quis,</a></h6>
@@ -710,29 +661,29 @@
             <div class="footer-post d-flex mb-2">
               <div class="agileinfo_footer_grid1 mr-2">
                 <a href="#blog" class=" scroll">
-                <img src="images/f1.jpg" alt=" " class="img-fluid">
+                <img src="assets/images/f1.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
               <div class="agileinfo_footer_grid1 mr-2">
                 <a href="#blog" class="scroll">
-                <img src="images/f2.jpg" alt=" " class="img-fluid">
+                <img src="assets/images/f2.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
               <div class="agileinfo_footer_grid1">
                 <a href="#blog" class="scroll">
-                <img src="images/f3.jpg" alt=" " class="img-fluid">
+                <img src="assets/images/f3.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
             </div>
             <div class="footer-post d-flex mb-2">
               <div class="agileinfo_footer_grid1 mr-2">
                 <a href="#blog" class="scroll">
-                <img src="images/f3.jpg" alt=" " class="img-fluid">
+                <img src="assets/images/f3.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
               <div class="agileinfo_footer_grid1 mr-2">
                 <a href="#blog" class=" scroll">
-                <img src="images/f2.jpg" alt=" " class="img-fluid">
+                <img src="assets/images/f2.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
               <div class="agileinfo_footer_grid1">
@@ -767,21 +718,21 @@
         <div class="buttom-nav ">
           <nav class="border-line py-2">
             <ul class="nav justify-content-center">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a href="#about" class="nav-link scroll">About</a>
-              </li>
-              <li class="nav-item">
-                <a href="#service" class="nav-link scroll">Services</a>
-              </li>
-              <li class="nav-item">
-                <a href="#blog" class="nav-link scroll">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a href="#contact" class="nav-link scroll">Contact</a>
-              </li>
+            <li class="nav-item active">
+                  <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a href="#about" class="nav-link scroll" >About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#team" class="nav-link scroll">Team</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#service" class="nav-link scroll">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#contact" class="nav-link scroll">Search</a>
+                </li>
             </ul>
           </nav>
         </div>
@@ -869,7 +820,7 @@
     </script>
     <!--// responsiveslides banner-->		  
     <!--responsive tabs-->	 
-    <script src="js/easy-responsive-tabs.js"></script>
+    <script src="assets/js/easy-responsive-tabs.js"></script>
     <script>
       $(document).ready(function () {
       $('#horizontalTab').easyResponsiveTabs({
@@ -890,15 +841,15 @@
     </script>
     <!--// responsive tabs-->	
     <!--About OnScroll-Number-Increase-JavaScript -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.countup.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.countup.js"></script>
     <script>
       $('.counter').countUp();
     </script>
     <!-- //OnScroll-Number-Increase-JavaScript -->	  
     <!-- start-smoth-scrolling -->
-    <script src="js/move-top.js"></script>
-    <script src="js/easing.js"></script>
+    <script src="assets/js/move-top.js"></script>
+    <script src="assets/js/easing.js"></script>
     <script>
       jQuery(document).ready(function ($) {
       	$(".scroll").click(function (event) {
