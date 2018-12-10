@@ -7,6 +7,7 @@ class Pengiriman_model extends CI_Model
     {
         $this->db->join('paket', 'paket.id_pengiriman = pengiriman.id_pengiriman');
         $this->db->join('kategori', 'kategori.id_kategori = pengiriman.id_kategori');
+        $this->db->join('pengirim', 'pengirim.id_pengirim = pengiriman.id_pengirim');
 
         if ($box != null && $search != null)
         { $this->db->like($box, $search); }

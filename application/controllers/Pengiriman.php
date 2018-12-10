@@ -1,12 +1,10 @@
 <?php
-
 require APPPATH . '/libraries/REST_Controller.php';
 
 class Pengiriman extends REST_Controller {
 
-    function __construct($config = 'rest') {
-        parent::__construct($config);
-    }
+    function __construct($config = 'rest') 
+    { parent::__construct($config); }
 
     // show data pengiriman
     function index_get() {
@@ -21,7 +19,7 @@ class Pengiriman extends REST_Controller {
     // insert new data to pengiriman
     function index_post() {
         $data = array(
-            'id_pengiriman'   => $this->post('id_pengiriman'),
+            'id_pengiriman'  => $this->post('id_pengiriman'),
             'id_pembeli'     => $this->post('id_pembeli'),
             'tanggal_beli'   => $this->post('tanggal_beli'),
             'total_harga'    => $this->post('total_harga'),
