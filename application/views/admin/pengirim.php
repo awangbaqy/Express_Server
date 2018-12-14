@@ -40,10 +40,9 @@
 						<!-- Main menu -->
 						<li><a href="<?php echo site_url('admin/') ?>"><i class="glyphicon glyphicon-home"></i> Beranda</a></li>
 		                <li><a href="<?php echo site_url('DataKategori/show') ?>"><i class="glyphicon glyphicon-list"></i> Kategori</a></li>
-						<li><a href="<?php echo site_url('DataPaket') ?>"><i class="glyphicon glyphicon-lock"></i> Paket</a></li>
+						<li><a href="<?php echo site_url('DataPaket/show') ?>"><i class="glyphicon glyphicon-lock"></i> Paket</a></li>
 						<li class="current"><a href="<?php echo site_url('DataPengirim/show') ?>"><i class="glyphicon glyphicon-user"></i> Pengirim</a></li>
-                        <li><a href="<?php echo site_url('DataPengiriman') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>
-                	
+                        <li><a href="<?php echo site_url('DataPengiriman/show') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>   	
                     </ul>
 				</div>
 				<div class="sidebar content-box" style="display: block;">
@@ -58,7 +57,7 @@
 					<div class="col-md-12">
 
                         <div class="content-box-header">
-                            <div class="panel-title"><b>Admin / Pengirim</b></div>
+                            <div class="panel-title"><b>Admin / Data Pengirim</b></div>
                         </div>
 
 						<div class="content-box-large box-with-header">
@@ -127,7 +126,7 @@
 						</textarea>
                     </div>
                     <div class="form-group">
-                        <label for="hp">No. HP :</label>
+                        <label for="hp">No. Handphone :</label>
                         <input type="number" class="form-control" id="hp" name="hp"
                             pattern="[0-9]{1,15}" required title="Harap diisi dengan angka"
                             placeholder="Masukkan nomer handphone ...">  
@@ -185,7 +184,7 @@
                 <fieldset>
                     <div class="form-group">
                         <label for="Name">Nama Pengirim :</label>
-                        <input type="text" class="form-control" id="name" name="name"
+                        <input type="text" class="form-control" id="nama" name="nama"
                             pattern="^[^-\s][a-zA-Z_\s-]{1,50}" required title="Harap diisi dengan huruf"
                             placeholder="Masukkan nama ...">  
                     </div>

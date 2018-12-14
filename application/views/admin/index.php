@@ -1,7 +1,7 @@
 <!DOCTYPE php>
 <html>
   	<head>
-		<title>Bootstrap Admin Theme v3</title>
+		<title>Admin | ExpressDelivery</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<!-- Bootstrap -->
@@ -56,6 +56,26 @@
 		  			</div>
 		  		</div>
 		  	</div>
+			<div class="col-lg-8">
+				<div class="card">
+					<div class="card-body">
+						<div class="year-calendar"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row bg-dark m-l-0 m-r-0 box-shadow ">
+
+				<!-- column -->
+				<div class="col-lg-8">
+						<div class="card">
+							<div class="card-body">
+								<div class="year-calendar"></div>
+							</div>
+						</div>
+				</div>
+				<!-- column -->
+			</div>
 
 		</div>
     </div>

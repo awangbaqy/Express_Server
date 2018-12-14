@@ -16,10 +16,10 @@ class DataPaket extends CI_Controller {
     {
         // Insert data
         $data = [
-            'nama' => $this->input->post('nama'),
-            'jenis_kelamin' => $this->input->post('jenis_kelamin'),
-            'alamat' => $this->input->post('alamat'),
-            'hp' => $this->input->post('hp')
+            'nama_paket' => $this->input->post('nama_paket'),
+            'berat' => $this->input->post('berat'),
+            'id_pengirim' => $this->input->post('id_pengirim'),
+            'id_pengiriman' => $this->input->post('id_pengiriman')
             ];
         
         if ($this->Paket_model->postPaket($data))
@@ -37,10 +37,10 @@ class DataPaket extends CI_Controller {
         $id_paket=$this->input->post('id_paket');
         
 		$data = [
-            'nama' => $this->input->post('nama'),
-            'jenis_kelamin' => $this->input->post('jenis_kelamin'),
-            'alamat' => $this->input->post('alamat'),
-            'hp' => $this->input->post('hp')
+            'nama_paket' => $this->input->post('nama_paket'),
+            'berat' => $this->input->post('berat'),
+            'id_pengirim' => $this->input->post('id_pengirim'),
+            'id_pengiriman' => $this->input->post('id_pengiriman')
             ];
 
         if ($this->Paket_model->update($id_paket, $data))

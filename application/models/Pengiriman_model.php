@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pengiriman_model extends CI_Model 
 {
+    //show
     public function getPengiriman($box, $search)
     {
         $this->db->join('paket', 'paket.id_pengiriman = pengiriman.id_pengiriman');
@@ -13,5 +14,25 @@ class Pengiriman_model extends CI_Model
         { $this->db->like($box, $search); }
         
         return $this->db->get('pengiriman')->result();
+    }
+
+    //create (POST)
+    public function postPengiriman($data)
+    {
+        return $this->db->insert('pengiriman', $data);
+    }
+
+    //update (PUT)
+    public function putPengiriman()
+    {
+        $this->db->where('id_pengiriman', $id_pengiriman);
+        $this->db->update('pengiriman', $data);
+    }
+
+    //delete (DELETE)
+    public function deletePengiriman()
+    {
+        $this->db->where('id_pengiriman', $id_pengiriman);
+        $this->db->delete('pengirim');
     }
 }

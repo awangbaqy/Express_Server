@@ -39,9 +39,9 @@
 					<ul class="nav">
 						<!-- Main menu -->
 						<li><a href="<?php echo site_url('admin/') ?>"><i class="glyphicon glyphicon-home"></i> Beranda</a></li>
-		                <li><a href="<?php echo site_url('DataKategori/show') ?>"><i class="glyphicon glyphicon-list"></i> Kategori</a></li>
+		                <li class="current"><a href="<?php echo site_url('DataKategori/show') ?>"><i class="glyphicon glyphicon-list"></i> Kategori</a></li>
 						<li><a href="<?php echo site_url('DataPaket/show') ?>"><i class="glyphicon glyphicon-lock"></i> Paket</a></li>
-						<li class="current"><a href="<?php echo site_url('DataPengirim/show') ?>"><i class="glyphicon glyphicon-user"></i> Pengirim</a></li>
+						<li><a href="<?php echo site_url('DataPengirim/show') ?>"><i class="glyphicon glyphicon-user"></i> Pengirim</a></li>
                         <li><a href="<?php echo site_url('DataPengiriman/show') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>
                 	
                     </ul>
@@ -58,7 +58,7 @@
 					<div class="col-md-12">
 
                         <div class="content-box-header">
-                            <div class="panel-title"><b>Admin / Kategori</b></div>
+                            <div class="panel-title"><b>Admin / Data Kategori</b></div>
                         </div>
 
 						<div class="content-box-large box-with-header">
@@ -106,12 +106,12 @@
                         <label for="Name">Kategori :</label>
                         <input type="text" class="form-control" id="nama" name="nama"
                             pattern="^[^-\s][a-zA-Z_\s-]{1,50}" required title="Harap diisi dengan huruf"
-                            placeholder="Masukkan nama ...">  
+                            placeholder="Masukkan kategori ...">  
                     </div>
                     <div class="form-group">
                         <label for="hp">Harga :</label>
-                        <input type="number" class="form-control" id="harga" name="harga"
-                            pattern="" required title="Harap diisi dengan angka"
+                        <input type="text" class="form-control" id="harga" name="harga"
+                            pattern="{1,50}" required title="Harap diisi dengan angka"
                             placeholder="Masukkan harga ...">  
                     </div>
                 </fieldset>
@@ -140,7 +140,7 @@
 											<?php echo $row->jenis ?>
 										</td>
                                         <td>
-											<?php echo $row->harga ?>
+											Rp.	<?php echo $row->harga ?>,-
 										</td>
 										<td>
                                             <!-- Tombol Modal Ubah-->

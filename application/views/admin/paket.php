@@ -40,8 +40,8 @@
 						<!-- Main menu -->
 						<li><a href="<?php echo site_url('admin/') ?>"><i class="glyphicon glyphicon-home"></i> Beranda</a></li>
 		                <li><a href="<?php echo site_url('DataKategori/show') ?>"><i class="glyphicon glyphicon-list"></i> Kategori</a></li>
-						<li><a href="<?php echo site_url('DataPaket') ?>"><i class="glyphicon glyphicon-lock"></i> Paket</a></li>
-						<li class="current"><a href="<?php echo site_url('DataPengirim/show') ?>"><i class="glyphicon glyphicon-user"></i> Pengirim</a></li>
+						<li class="current"><a href="<?php echo site_url('DataPaket/show') ?>"><i class="glyphicon glyphicon-lock"></i> Paket</a></li>
+						<li><a href="<?php echo site_url('DataPengirim/show') ?>"><i class="glyphicon glyphicon-user"></i> Pengirim</a></li>
                         <li><a href="<?php echo site_url('DataPengiriman') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>
                 	
                     </ul>
@@ -58,14 +58,14 @@
 					<div class="col-md-12">
 
                         <div class="content-box-header">
-                            <div class="panel-title"><b>Admin / Pengirim</b></div>
+                            <div class="panel-title"><b>Admin / Data Paket</b></div>
                         </div>
 
 						<div class="content-box-large box-with-header">
 
 							<div class="panel-body">
                                 <div class="row">
-                                    <form class="form-inline" action="<?php echo site_url('DataPengirim/show') ?>" method="post">
+                                    <form class="form-inline" action="<?php echo site_url('DataPaket/show') ?>" method="post">
                                     <div class="col-md-6">
                                         <label for="Cari">Pencarian : </label>
                                         <select class="form-control" id="kolom" name="kolom">
@@ -85,10 +85,10 @@
 								<table class="table table-striped">
 									<thead>
 										<th>No</th>
-										<th>Nama Pengirim</th>
-                                        <th>Jenis Kelamin</th>
-                                        <th>Alamat</th>
-                                        <th>No. Handphone</th>
+										<th>Nama Paket</th>
+                                        <th>Berat</th>
+                                        <th>ID Pengirim</th>
+                                        <th>ID Pengiriman</th>
 										<th>
                                             <!-- Tombol Modal Tambah-->
                                             <button type="button" class="btn btn-info btn-sm glyphicon glyphicon-plus" data-toggle="modal" data-target="#ModalTambah"> Tambah</button>
@@ -101,13 +101,13 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title"><legend>Tambah Pengirim</legend></h4>
+                <h4 class="modal-title"><legend>Tambah Paket</legend></h4>
             </div>
             <div class="modal-body">
-    <?php echo form_open('DataPengirim/store') ?>
+    <?php echo form_open('DataPaket/store') ?>
                 <fieldset>
                     <div class="form-group">
-                        <label for="Name">Nama Pengirim :</label>
+                        <label for="Name">Nama Paket :</label>
                         <input type="text" class="form-control" id="nama" name="nama"
                             pattern="^[^-\s][a-zA-Z_\s-]{1,50}" required title="Harap diisi dengan huruf"
                             placeholder="Masukkan nama ...">  
@@ -152,19 +152,19 @@
 										<?php foreach($data as $row) { ?>
 										<tr>
 										<td>
-											<?php echo $row->id_pengirim ?>
+											<?php echo $row->id_paket ?>
 										</td>
 										<td>
-											<?php echo $row->nama ?>
+											<?php echo $row->nama_paket ?>
 										</td>
                                         <td>
-											<?php echo $row->jenis_kelamin ?>
+											<?php echo $row->berat ?> kg
 										</td>
                                         <td>
-											<?php echo $row->alamat ?>
+											<?php echo $row->id_pengirim ?>
 										</td>
                                         <td>
-											<?php echo $row->hp ?>
+											<?php echo $row->id_pengiriman ?>
 										</td>
 										<td>
                                             <!-- Tombol Modal Ubah-->
@@ -178,13 +178,13 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title"><legend>Edit Pengirim</legend></h4>
+                <h4 class="modal-title"><legend>Edit Paket</legend></h4>
             </div>
             <div class="modal-body">
-<?php echo form_open('DataPengirim/update/'.$row->id_pengirim); echo form_hidden('id', $row->id_pengirim); ?>
+<?php echo form_open('DataPaket/update/'.$row->id_pengirim); echo form_hidden('id', $row->id_pengirim); ?>
                 <fieldset>
                     <div class="form-group">
-                        <label for="Name">Nama Pengirim :</label>
+                        <label for="Name">Nama Paket :</label>
                         <input type="text" class="form-control" id="name" name="name"
                             pattern="^[^-\s][a-zA-Z_\s-]{1,50}" required title="Harap diisi dengan huruf"
                             placeholder="Masukkan nama ...">  
@@ -222,7 +222,7 @@
 </div>
 <!-- Tutup Modal Ubah -->
 
-											<a href="<?php echo site_url('DataPengirim/destroy/'.$row->id_pengirim) ?>" type="button" class="btn btn-danger btn-sm glyphicon glyphicon-trash"
+											<a href="<?php echo site_url('DataPaket/destroy/'.$row->id_pengirim) ?>" type="button" class="btn btn-danger btn-sm glyphicon glyphicon-trash"
 												onclick="return confirm('Apakah anda yakin?')"></a>
 										</td>
 										</tr>

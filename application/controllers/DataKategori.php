@@ -16,7 +16,7 @@ class DataKategori extends CI_Controller {
     {
         // Insert data
         $data = [
-            'kategori' => $this->input->post('kategori'),
+            'jenis' => $this->input->post('jenis'),
             'harga'    => $this->input->post('harga')
         ];
         if ($this->Kategori_model->postKategori($data))
@@ -34,7 +34,7 @@ class DataKategori extends CI_Controller {
         $id_kategori=$this->input->post('id_kategori');
 
 		$data = [
-            'kategori' => $this->input->post('kategori'),
+            'jenis' => $this->input->post('jenis'),
             'harga'    => $this->input->post('harga')
         ];
         
