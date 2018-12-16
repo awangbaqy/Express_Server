@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 05 Des 2018 pada 17.01
+-- Generation Time: 16 Des 2018 pada 12.40
 -- Versi Server: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -39,9 +39,9 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`id_kategori`, `jenis`, `harga`) VALUES
-(1, 'fast', 35000),
-(2, 'standard', 20000),
-(3, 'cheap', 10000);
+(1, 'Fast', 35000),
+(2, 'Standard', 20000),
+(3, 'Economy', 10000);
 
 -- --------------------------------------------------------
 
@@ -83,8 +83,9 @@ CREATE TABLE `pengirim` (
 --
 
 INSERT INTO `pengirim` (`id_pengirim`, `nama`, `jenis_kelamin`, `alamat`, `hp`) VALUES
-(1, 'Riza Awwalul', 'Laki- laki', 'Surabaya', '082550055588'),
-(2, 'Triska Intania', 'Perempuan', 'Malang', '082884145588');
+(1, 'Riza Awwalul', 'Laki-Laki', 'Surabaya', '082550055588'),
+(2, 'Triska Intania', 'Perempuan', 'Malang', '082884145588'),
+(3, 'cob', 'Laki - Laki', '  asd\r\n                       ', '2');
 
 -- --------------------------------------------------------
 
@@ -100,15 +101,16 @@ CREATE TABLE `pengiriman` (
   `alamat_penerima` varchar(30) NOT NULL,
   `total_harga` int(15) NOT NULL,
   `status` varchar(10) NOT NULL,
-  `id_kategori` int(11) NOT NULL
+  `id_kategori` int(11) NOT NULL,
+  `id_pengirim` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `pengiriman`
 --
 
-INSERT INTO `pengiriman` (`id_pengiriman`, `tgl_masuk`, `tgl_keluar`, `nama_penerima`, `alamat_penerima`, `total_harga`, `status`, `id_kategori`) VALUES
-(1, '2018-12-03', '2018-12-04', 'Amanda', 'Jl. Rose No.32 Bandung', 45000, 'dikirim', 1);
+INSERT INTO `pengiriman` (`id_pengiriman`, `tgl_masuk`, `tgl_keluar`, `nama_penerima`, `alamat_penerima`, `total_harga`, `status`, `id_kategori`, `id_pengirim`) VALUES
+(1, '2018-12-03', '2018-12-04', 'Amanda', 'Jl. Rose No.32 Bandung', 45000, 'Dikirim', 1, 2);
 
 --
 -- Indexes for dumped tables
@@ -159,7 +161,7 @@ ALTER TABLE `paket`
 -- AUTO_INCREMENT for table `pengirim`
 --
 ALTER TABLE `pengirim`
-  MODIFY `id_pengirim` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pengirim` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pengiriman`
