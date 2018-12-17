@@ -8,7 +8,7 @@ class DataPengiriman extends CI_Controller {
 
     public function show()
 	{
-        $data['data'] = $this->Pengiriman_model->getPengiriman();
+        $data['data'] = $this->Pengiriman_model->getPengiriman('','');
         $this->load->view('admin/pengiriman', $data);
     }
 

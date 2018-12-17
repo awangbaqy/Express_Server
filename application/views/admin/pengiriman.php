@@ -98,7 +98,7 @@
 									</thead>
 <?php if(isset($data)) { ?>
 									<tbody>
-										<?php foreach($data as $row) { ?>
+										<?php $start = 0; foreach($data as $row) { ?>
 										<tr>
 											<td><?php echo $start+=1 ?></td>
 											<td align="center"><?php echo $row->id_pengiriman ?></td>
@@ -123,7 +123,6 @@
 							</div>
 
 							<div class="panel-footer">
-<?php echo $links ?>
 							</div>
 
 <?php } else {echo "<tr><td colspan='7'><center>Tidak Ada Data!</center></td></tr>";} ?>

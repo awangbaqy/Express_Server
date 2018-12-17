@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 16 Des 2018 pada 12.40
--- Versi Server: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- Generation Time: Dec 17, 2018 at 10:23 AM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori`
+-- Table structure for table `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -35,7 +35,7 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kategori`
+-- Dumping data for table `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `jenis`, `harga`) VALUES
@@ -46,28 +46,31 @@ INSERT INTO `kategori` (`id_kategori`, `jenis`, `harga`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `paket`
+-- Table structure for table `paket`
 --
 
 CREATE TABLE `paket` (
   `id_paket` int(11) NOT NULL,
   `nama_paket` varchar(50) NOT NULL,
   `berat` int(3) NOT NULL,
-  `id_pengirim` int(11) NOT NULL,
   `id_pengiriman` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `paket`
+-- Dumping data for table `paket`
 --
 
-INSERT INTO `paket` (`id_paket`, `nama_paket`, `berat`, `id_pengirim`, `id_pengiriman`) VALUES
-(1, 'Camera NIKON', 5, 2, 1);
+INSERT INTO `paket` (`id_paket`, `nama_paket`, `berat`, `id_pengiriman`) VALUES
+(1, 'Camera NIKON', 5, 1),
+(5, 'SONY ALPHA A6000 Kit 16-50', 1, 7),
+(6, 'Samsung SCP-2370RH', 6, 7),
+(7, 'Go Pro Cam Full HD 1080P WIFI', 1, 8),
+(8, 'Samsung SCP-2370RH', 6, 8);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengirim`
+-- Table structure for table `pengirim`
 --
 
 CREATE TABLE `pengirim` (
@@ -79,18 +82,19 @@ CREATE TABLE `pengirim` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pengirim`
+-- Dumping data for table `pengirim`
 --
 
 INSERT INTO `pengirim` (`id_pengirim`, `nama`, `jenis_kelamin`, `alamat`, `hp`) VALUES
 (1, 'Riza Awwalul', 'Laki-Laki', 'Surabaya', '082550055588'),
 (2, 'Triska Intania', 'Perempuan', 'Malang', '082884145588'),
-(3, 'cob', 'Laki - Laki', '  asd\r\n                       ', '2');
+(3, 'cob', 'Laki - Laki', '  asd\r\n                       ', '2'),
+(4, 'PT. Bakul Kamera', 'Laki - Laki', 'Kota Malang', '081234387282');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengiriman`
+-- Table structure for table `pengiriman`
 --
 
 CREATE TABLE `pengiriman` (
@@ -106,11 +110,13 @@ CREATE TABLE `pengiriman` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pengiriman`
+-- Dumping data for table `pengiriman`
 --
 
 INSERT INTO `pengiriman` (`id_pengiriman`, `tgl_masuk`, `tgl_keluar`, `nama_penerima`, `alamat_penerima`, `total_harga`, `status`, `id_kategori`, `id_pengirim`) VALUES
-(1, '2018-12-03', '2018-12-04', 'Amanda', 'Jl. Rose No.32 Bandung', 45000, 'Dikirim', 1, 2);
+(1, '2018-12-03', '2018-12-04', 'Amanda', 'Jl. Rose No.32 Bandung', 45000, 'Dikirim', 1, 2),
+(7, '2018-12-16', '0000-00-00', 'user', 'user													', 245000, 'Dikemas', 1, 4),
+(8, '2018-12-17', '0000-00-00', 'riza', 'jalan jalan                   ', 140000, 'Dikemas', 2, 4);
 
 --
 -- Indexes for dumped tables
@@ -126,8 +132,7 @@ ALTER TABLE `kategori`
 -- Indexes for table `paket`
 --
 ALTER TABLE `paket`
-  ADD PRIMARY KEY (`id_paket`),
-  ADD UNIQUE KEY `id_user` (`id_pengirim`);
+  ADD PRIMARY KEY (`id_paket`);
 
 --
 -- Indexes for table `pengirim`
@@ -150,25 +155,21 @@ ALTER TABLE `pengiriman`
 --
 ALTER TABLE `kategori`
   MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `paket`
 --
 ALTER TABLE `paket`
-  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `pengirim`
 --
 ALTER TABLE `pengirim`
-  MODIFY `id_pengirim` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
+  MODIFY `id_pengirim` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `pengiriman`
 --
 ALTER TABLE `pengiriman`
-  MODIFY `id_pengiriman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-COMMIT;
+  MODIFY `id_pengiriman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -14,9 +14,7 @@ class Paket_model extends CI_Model
 
     //create (POST)
     public function postPaket($data)
-    {
-        return $this->db->insert('paket',$data);
-    }
+    { return $this->db->insert('paket',$data); }
 
     //update (PUT)
     public function putPaket()
@@ -30,5 +28,11 @@ class Paket_model extends CI_Model
     {
         $this->db->where('id_paket', $id_pengirim);
         $this->db->delete('paket');
+    }
+
+    public function delByID($id)
+    {
+        $this->db->where('id_pengiriman', $id);
+        return $this->db->delete('paket');
     }
 }

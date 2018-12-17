@@ -87,7 +87,6 @@
 										<th>No</th>
 										<th>Nama Paket</th>
                                         <th>Berat</th>
-                                        <th>ID Pengirim</th>
                                         <th>ID Pengiriman</th>
 										<th>
                                             <!-- Tombol Modal Tambah-->
@@ -161,17 +160,14 @@
 											<?php echo $row->berat ?> kg
 										</td>
                                         <td>
-											<?php echo $row->id_pengirim ?>
-										</td>
-                                        <td>
 											<?php echo $row->id_pengiriman ?>
 										</td>
 										<td>
                                             <!-- Tombol Modal Ubah-->
-                                            <button type="button" class="btn btn-info btn-sm glyphicon glyphicon-pencil" data-toggle="modal" data-target="#ModalUbah<?php echo $row->id_pengirim ?>"></button>
+                                            <button type="button" class="btn btn-info btn-sm glyphicon glyphicon-pencil" data-toggle="modal" data-target="#ModalUbah<?php echo $row->id_paket ?>"></button>
 
 <!-- Modal Ubah -->
-<div id="ModalUbah<?php echo $row->id_pengirim ?>" class="modal fade" role="dialog">
+<div id="ModalUbah<?php echo $row->id_paket ?>" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -181,7 +177,7 @@
                 <h4 class="modal-title"><legend>Edit Paket</legend></h4>
             </div>
             <div class="modal-body">
-<?php echo form_open('DataPaket/update/'.$row->id_pengirim); echo form_hidden('id', $row->id_pengirim); ?>
+<?php echo form_open('DataPaket/update/'.$row->id_paket); echo form_hidden('id', $row->id_paket); ?>
                 <fieldset>
                     <div class="form-group">
                         <label for="Name">Nama Paket :</label>
@@ -222,7 +218,7 @@
 </div>
 <!-- Tutup Modal Ubah -->
 
-											<a href="<?php echo site_url('DataPaket/destroy/'.$row->id_pengirim) ?>" type="button" class="btn btn-danger btn-sm glyphicon glyphicon-trash"
+											<a href="<?php echo site_url('DataPaket/destroy/'.$row->id_paket) ?>" type="button" class="btn btn-danger btn-sm glyphicon glyphicon-trash"
 												onclick="return confirm('Apakah anda yakin?')"></a>
 										</td>
 										</tr>

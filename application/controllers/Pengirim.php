@@ -43,7 +43,7 @@ class Pengirim extends REST_Controller {
     function index_put() {
         $id_pengirim = $this->put('id_pengirim');
         $data = array(
-            'id_pengirim'       => $this->post('id_pengirim'),
+            'id_pengirim'   => $this->post('id_pengirim'),
             'nama'          => $this->post('nama'),
             'jenis_kelamin' => $this->post('jenis_kelamin'),
             'alamat'        => $this->post('alamat'),

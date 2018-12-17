@@ -19,7 +19,8 @@ class Pengiriman_model extends CI_Model
     //create (POST)
     public function postPengiriman($data)
     {
-        return $this->db->insert('pengiriman', $data);
+        $this->db->insert('pengiriman', $data); 
+        return $this->db->insert_id();
     }
 
     //update (PUT)
@@ -30,9 +31,9 @@ class Pengiriman_model extends CI_Model
     }
 
     //delete (DELETE)
-    public function deletePengiriman()
+    public function deletePengiriman($id_pengiriman)
     {
         $this->db->where('id_pengiriman', $id_pengiriman);
-        $this->db->delete('pengirim');
+        return $this->db->delete('pengiriman');
     }
 }

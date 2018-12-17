@@ -14,9 +14,7 @@ class Pengirim_model extends CI_Model
 
     //create (POST)
     public function postPengirim($data)
-    {
-        return $this->db->insert('pengirim',$data);
-    }
+    { return $this->db->insert('pengirim', $data); }
 
     //update (PUT)
     public function putPengirim()
@@ -30,5 +28,12 @@ class Pengirim_model extends CI_Model
     {
         $this->db->where('id_pengirim', $id_pengirim);
         $this->db->delete('pengirim');
+    }
+
+    // REST
+    public function getName($name)
+    {
+        $this->db->where('nama', $name);
+        return $this->db->get('pengirim')->row();
     }
 }

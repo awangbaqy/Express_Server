@@ -28,4 +28,12 @@ class Kategori_model extends CI_Model
        $this->db->where('id_kategori', $id_kategori);
        $this->db->delete('kategori');
    }
+
+   // REST
+
+   public function getID($id)
+   {
+       $this->db->where('id_kategori', $id);
+       return $this->db->get('kategori')->row();
+   }
 }
