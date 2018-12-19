@@ -42,7 +42,7 @@
 		                <li><a href="<?php echo site_url('DataKategori/show') ?>"><i class="glyphicon glyphicon-list"></i> Kategori</a></li>
 						<li class="current"><a href="<?php echo site_url('DataPaket/show') ?>"><i class="glyphicon glyphicon-lock"></i> Paket</a></li>
 						<li><a href="<?php echo site_url('DataPengirim/show') ?>"><i class="glyphicon glyphicon-user"></i> Pengirim</a></li>
-                        <li><a href="<?php echo site_url('DataPengiriman') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>
+                        <li><a href="<?php echo site_url('DataPengiriman/show') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>
                 	
                     </ul>
 				</div>

@@ -56,11 +56,11 @@
               <ul>
                 <li>
                   <span class="fas fa-phone-volume" ></span>
-                  <p>+(000)123 4565 32</p>
+                  <p>+(000)123 8888 55</p>
                 </li>
                 <li>
                   <span class="fas fa-envelope"></span>
-                  <p><a href="mailto:info@example.com">info@example1.com</a></p>
+                  <p><a href="gmail.com">express@example.com</a></p>
                 </li>
                 <li>
                 </li>
@@ -87,8 +87,8 @@
           <div class="headdser-nav-color" data-blast="bgColor">
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
               <ul class="navbar-nav ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Home <span class="sr-only"></a>
                 </li>
                 <li class="nav-item">
                   <a href="#about" class="nav-link scroll" >About</a>
@@ -100,7 +100,7 @@
                   <a href="#service" class="nav-link scroll">Services</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#contact" class="nav-link scroll">Search</a>
+                  <a href="#contact" class="nav-link scroll">Package Tracker</a>
                 </li>
               </ul>
             </div>
@@ -120,7 +120,7 @@
                   <div class="slider-info text-left">
                     <img src="assets/images/admin.png" style="width:80px; height:80px;">
                     <h4>Admin</h4>
-                    <h5>Delivery Express</h5><br>
+                    <h5>Express Delivery</h5><br>
                     <div class="outs_more-buttn" >
                       <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">Login</a>
                     </div>
@@ -172,26 +172,27 @@
         <div class="main row ">
           <!-- TENTH EXAMPLE -->
           <div class="col-lg-4 view view-tenth">
-            <img src="assets/images/logo.jpg" alt="" class="img-fluid">
+            <img src="assets/images/p1.jpg" alt="" class="img-fluid">
             <div class="mask">
-              <h3 data-blast="bgColor">Success</h3>
-              <p>Vivamus sed poritor felis.ntesque habitant morbi senectus et netus</p>
+              <h3 data-blast="bgColor">Express</h3>
+              <p>provide package delivery in the form of goods</p>
               <a href="#" class="info" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">Read More</a>
             </div>
           </div>
           <div class="col-lg-4 view view-tenth">
-            <img src="assets/images/ab2.jpg" alt="" class="img-fluid">
+            <img src="assets/images/p2.jpg" alt="" class="img-fluid">
             <div class="mask">
-              <h3 data-blast="bgColor">Hard Work</h3>
-              <p>Vivamus sed poritor felis.ntesque habitant morbi senectus et netus</p>
+              <h3 data-blast="bgColor">Express</h3>
+              <p>we are committed to serving every 
+              <br>Shipment Honestly and Responsibly</p>
               <a href="#" class="info" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">Read More</a>
             </div>
           </div>
           <div class="col-lg-4 view view-tenth">
-            <img src="assets/images/ab3.jpg" alt="" class="img-fluid">
+            <img src="assets/images/p3.jpg" alt="" class="img-fluid">
             <div class="mask">
-              <h3 data-blast="bgColor">Admission</h3>
-              <p>Vivamus sed poritor felis.ntesque habitant morbi senectus et netus</p>
+              <h3 data-blast="bgColor">Express</h3>
+              <p>provide package delivery in the form of documents</p>
               <a href="#" class="info" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">Read More</a>
             </div>
           </div>
@@ -204,7 +205,7 @@
         <div id="horizontalTab">
           <ul class="resp-tabs-list justify-content-center">
             <li data-blast="bgColor">About</li>
-            <li data-blast="bgColor">Admission</li>
+            <li data-blast="bgColor">Vision</li>
             <li data-blast="bgColor">Mission</li>
           </ul>
           <div class="resp-tabs-container">
@@ -213,8 +214,16 @@
                 <div class="col-md-7 latest-list">
                   <div class="about-jewel-agile-left">
                     <h4 class="mb-3" data-blast="color">Express Delivery </h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque</p>
-                    <h5 data-blast="color"> Who we are</h5>
+                    <p>
+                      ExpressDelivery adalah perusahaan pengiriman paket layanan eksklusif yang tersebar di seluruh Indonesia.
+                      Kami melayani pengiriman dalam kota, antar kota, antar-provinsi, dan juga pelanggan e-commerce. 
+                      Menyediakan layanan penjemputan dengan kecepatan transmisi yang tinggi, pada saat yang sama juga mendukung pertumbuhan bisnis e-commerce.
+                    </p>
+                    <br>
+                    <p>
+                      Kami berkomitmen untuk melayani setiap pengiriman dengan jujur dan bertanggung jawab.
+                    </p>
+                    <h5 data-blast="color"> Express | Package Delivery</h5>
                   </div>
                 </div>
                 <div class="col-md-5 about-txt-img">
@@ -225,13 +234,13 @@
             <div class="tab2">
               <div class="row mt-lg-4 mt-3">
                 <div class="col-md-5 about-txt-img">
-                  <img src="assets/images/ab3.jpg" class="img-thumbnail" alt="">
+                  <img src="assets/images/visi-misi-TOP.jpg" class="img-thumbnail" alt="">
                 </div>
                 <div class="col-md-7 latest-list">
                   <div class="about-jewel-agile-left">
-                    <h4 class="mb-3" data-blast="color"> ipsum dolor</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque</p>
-                    <h5 data-blast="color">What We do</h5>
+                    <h4 class="mb-3" data-blast="color">Vision</h4>
+                    <p>Menjadi perusahaan pengiriman global terdepan di dunia.</p>
+                    <h5 data-blast="color">Express | Package Delivery</h5>
                   </div>
                 </div>
               </div>
@@ -240,27 +249,17 @@
               <div class="row mt-lg-4 mt-3">
                 <div class="col-md-7 latest-list">
                   <div class="about-jewel-agile-left">
-                    <h4 class="mb-3" data-blast="color">Lorem ipsum</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque</p>
-                    <h5 data-blast="color">What Our Vision</h5>
+                    <h4 class="mb-3" data-blast="color"> Mission</h4>
+                    <p>
+                      Untuk memberi pengalaman dan kenyamanan terbaik kepada pelanggan 
+                      <br>
+                      Secara Konsisten...
+                    </p>
+                    <h5 data-blast="color">Express | Package Delivery</h5>
                   </div>
                 </div>
                 <div class="col-md-5 about-txt-img">
-                  <img src="images/ab2.jpg" class="img-thumbnail" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="tab4">
-              <div class="row mt-lg-4 mt-3">
-                <div class="col-md-5 about-txt-img">
-                  <img src="images/ab1.jpg" class="img-thumbnail" alt="">
-                </div>
-                <div class="col-md-7 latest-list">
-                  <div class="about-jewel-agile-left">
-                    <h4 class="mb-3" data-blast="color"> ipsum dolor</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta</p>
-                    <h5 data-blast="color">What Our Mission</h5>
-                  </div>
+                  <img src="assets/images/visi-misi-TOP.jpg" class="img-thumbnail" alt="">
                 </div>
               </div>
             </div>
@@ -294,7 +293,7 @@
               </div>
               <div class="ser-inner-info">
                 <h4 class="my-3">Standard</h4>
-                <p>jenis layanan pengiriman biasa</p>
+                <p>jenis layanan pengiriman sedang</p>
               </div>
             </div>
           </div>
@@ -350,62 +349,10 @@
     <!--blog -->
     <section class="blog py-lg-4 py-md-3 py-sm-3 py-3" id="blog">
       <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
-        <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Our Blog </h3>
+        <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3"> </h3>
         <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex">
-            <div class="clients-color">
-              <img src="assets/images/ab3.jpg" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Quisque a rhoncus </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    <li class="mr-3"><span class="far fa-calendar-check"></span><a href="#" data-toggle="modal" data-target="#exampleModalLive">12/4/2019</a></li>
-                    <li><span class="far fa-comments"></span><a href="#" data-toggle="modal" data-target="#exampleModalLive">5 Comments</a></li>
-                  </ul>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6  blog-grid-flex">
-            <div class="clients-color">
-              <img src="images/ab1.jpg" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Quisque a rhoncus </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    <li class="mr-3"><span class="far fa-calendar-check"></span><a href="#" data-toggle="modal" data-target="#exampleModalLive">12/4/2019</a></li>
-                    <li><span class="far fa-comments"></span><a href="#" data-toggle="modal" data-target="#exampleModalLive">5 Comments</a></li>
-                  </ul>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex">
-            <div class="clients-color">
-              <img src="images/ab2.jpg" class="img-fluid" alt="">
-              <div class="blog-txt-info">
-                <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Quisque a rhoncus </a></h4>
-                <div class="news-date my-3">
-                  <ul>
-                    <li class="mr-3"><span class="far fa-calendar-check"></span><a href="#" data-toggle="modal" data-target="#exampleModalLive">12/4/2019</a></li>
-                    <li><span class="far fa-comments"></span><a href="#" data-toggle="modal" data-target="#exampleModalLive">5 Comments</a></li>
-                  </ul>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                <div class="outs_more-buttn" >
-                  <a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="bgColor">More</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
+          
           
           
           
@@ -548,13 +495,13 @@
                   <h6 data-blast="color">Phone</h6>
                 </li>
                 <li class="mt-2">
-                  <p>(0341) 555 0088</p>
+                  <p>+(000)123 8888 55</p>
                 </li>
                 <li class="mt-lg-4 mt-3">
                   <h6 data-blast="color">Email</h6>
                 </li>
                 <li class="mt-2">
-                  <p><a href="mailto:info@example.com">express@example.com</a></p>
+                  <p><a href="mailto:info@example.com">exressdelivery@example.com</a></p>
                 </li>
               </ul>
             </div>
@@ -562,7 +509,7 @@
           <div class="col-md-7 contact-form">
           <br>
           <br>
-          <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Mengecek Paket</h3>
+          <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Package Tracker</h3>
             <form action="#" method="post">
               <div class="row text-center contact-wls-detail">
                 
@@ -731,7 +678,7 @@
                   <a href="#service" class="nav-link scroll">Services</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#contact" class="nav-link scroll">Search</a>
+                  <a href="#contact" class="nav-link scroll">Package Tracker</a>
                 </li>
             </ul>
           </nav>
@@ -749,8 +696,11 @@
               <li><a href="#"><span class="fab fa-vk"></span></a></li>
             </ul>
           </div>
+          <!-- <p> 
+            © 2018 Website. ExpressDelivery | Design by <a href="http://www.W3Layouts.com" target="_blank">Riza Awwalul B. & Triska Intania S.</a>
+          </p> -->
           <p> 
-            © 2018 ClassWork. All Rights Reserved | Design by <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a>
+            © 2018 Website. ExpressDelivery | Design by <a href="http://www.google.com" target="_blank">Riza Awwalul B. & Triska Intania S.</a>
           </p>
         </div>
       </div>
