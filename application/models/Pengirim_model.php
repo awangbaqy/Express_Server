@@ -4,29 +4,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Pengirim_model extends CI_Model 
 {
     //show
-    public function getPengirim()
-    {
-        $query = $this->db->get('pengirim');
-        if($query->num_rows()>0){
-            return $query->result();
-        }
+    public function select($box, $search)
+    { 
+        if ($box != 'null' && $search != 'null')
+        { $this->db->like($box, $search); }
+
+        return $this->db->get('pengirim')->result(); 
     }
 
-    //create (POST)
-    public function postPengirim($data)
-    { return $this->db->insert('pengirim', $data); }
+    //create
+    public function insert($data)
+    { $this->db->insert('pengirim', $data); }
 
-    //update (PUT)
-    public function putPengirim()
+    //update
+    public function update($id, $data)
     {
-        $this->db->where('id_pengirim', $id_pengirim);
+        $this->db->where('id_pengirim', $id);
         $this->db->update('pengirim', $data);
     }
 
-    //delete (DELETE)
-    public function deletePengirim()
+    //delete
+    public function delete($id)
     {
-        $this->db->where('id_pengirim', $id_pengirim);
+        $this->db->where('id_pengirim', $id);
         $this->db->delete('pengirim');
     }
 

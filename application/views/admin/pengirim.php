@@ -45,11 +45,6 @@
                         <li><a href="<?php echo site_url('DataPengiriman/show') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>   	
                     </ul>
 				</div>
-				<div class="sidebar content-box" style="display: block;">
-					<ul class="nav">
-                        <li><a href="<?php echo site_url('admin/report') ?>"><i class="glyphicon glyphicon-book"></i> Laporan</a></li>
-                    </ul>
-				</div>
 			</div>
 
 			<div class="col-md-10">
@@ -65,25 +60,25 @@
 							<div class="panel-body">
                                 <div class="row">
                                     <form class="form-inline" action="<?php echo site_url('DataPengirim/show') ?>" method="post">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <label for="Cari">Pencarian : </label>
                                         <select class="form-control" id="kolom" name="kolom">
+                                            <option value="id_pengirim">ID</option>
                                             <option value="nama">Nama</option>
                                             <option value="jenis_kelamin">Jenis Kelamin</option>
-                                            <option value="hp">HP</option>
+                                            <option value="alamat">Alamat</option>
+                                            <option value="hp">No. HP</option>
                                         </select>
                                         <input class="form-control" type="text" id="search" name="search" value="" placeholder="Search...">
                                         <button class="btn btn-default" type="submit" name="tombol" value="filter">Go</button>
-                                    </div>
-									<div class="col-md-6" align="right">
-                                        <button class="btn btn-default" type="submit" name="tombol" value="print"><span class="glyphicon glyphicon-print"></span></button>
                                     </div>
                                     </form>
                                 </div>
 
 								<table class="table table-striped">
 									<thead>
-										<th>No</th>
+                                        <th>No.</th>
+										<th>ID</th>
 										<th>Nama Pengirim</th>
                                         <th>Jenis Kelamin</th>
                                         <th>Alamat</th>
@@ -147,8 +142,9 @@
 									</thead>
 <?php if(isset($data)) { ?>
 									<tbody>
-										<?php foreach($data as $row) { ?>
+										<?php $start=0; foreach($data as $row) { ?>
 										<tr>
+                                        <td><?php echo $start+=1 ?></td>
 										<td>
 											<?php echo $row->id_pengirim ?>
 										</td>
@@ -179,33 +175,33 @@
                 <h4 class="modal-title"><legend>Edit Pengirim</legend></h4>
             </div>
             <div class="modal-body">
-<?php echo form_open('DataPengirim/update/'.$row->id_pengirim); echo form_hidden('id', $row->id_pengirim); ?>
+<?php echo form_open('DataPengirim/update/'); echo form_hidden('id_pengirim', $row->id_pengirim); ?>
                 <fieldset>
                     <div class="form-group">
                         <label for="Name">Nama Pengirim :</label>
                         <input type="text" class="form-control" id="nama" name="nama"
                             pattern="^[^-\s][a-zA-Z_\s-]{1,50}" required title="Harap diisi dengan huruf"
-                            placeholder="Masukkan nama ...">  
+                            placeholder="Masukkan nama ..." value="<?php echo $row->nama ?>">
                     </div>
                     <div class="form-group">
                         <label for="Name">Jenis Kelamin :</label>
 		                <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
-							<option value="Laki - Laki">Laki - Laki</option>
-							<option value="Perempuan">Perempuan</option>
+                        <?php $p=''; $l=''; if($row->jenis_kelamin == 'Perempuan') {$p='selected';} else {$l='selected';} ?>
+							<option value="Laki - Laki" <?php echo $l ?>>Laki - Laki</option>
+							<option value="Perempuan" <?php echo $p ?>>Perempuan</option>
 						</select>
 		            </div>
                     <div class="form-group">
                         <label for="Alamat">Alamat :</label>
                         <textarea type="text" class="form-control" id="alamat" name="alamat"
                             pattern="{1,1000}" required title="Harap diisi"
-                            placeholder="Masukkan alamat ...">  
-                        </textarea>
+                            placeholder="Masukkan alamat ..."><?php echo $row->alamat ?></textarea>
                     </div>
                     <div class="form-group">
                         <label for="hp">No. HP :</label>
                         <input type="text" class="form-control" id="hp" name="hp"
                             pattern="[0-9]{1,15}" required title="Harap diisi dengan angka"
-                            placeholder="Masukkan nomer handphone ...">  
+                            placeholder="Masukkan nomer handphone ..." value="<?php echo $row->hp ?>">
                     </div>
                 </fieldset>
             </div>

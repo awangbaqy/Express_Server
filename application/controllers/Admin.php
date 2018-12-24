@@ -1,23 +1,21 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
-
+class Admin extends CI_Controller 
+{
 	public function __construct()
-    { parent::__construct(); }
+    { 
+        parent::__construct(); 
+        if ($this->session->user != 'admin')
+        { redirect('home'); }
+    }
 
     public function index()
     { $this->load->view('admin/index'); }
-
-    public function login()
+    
+    public function logout()
     {
-        $user = $this->input->post('user');
-        $pass = $this->input->post('pass');
-        
-        if ($user == 'admin' && $pass == 'admin')
-        { redirect('admin/');
-        }
-        else
-        { redirect('home'); }
-    }	
+        $this->session->sess_destroy();
+        redirect('home/');
+    }
 }

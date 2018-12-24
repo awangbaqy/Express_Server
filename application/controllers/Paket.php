@@ -16,11 +16,7 @@ class Paket extends REST_Controller
             'id_pengiriman' => $this->post('id_pengiriman')
         );
 
-        $this->Paket_model->postPaket($data);
+        $this->Paket_model->insert($data);
     }
-
 }
-
-/* End of file Controllername.php */
-
 ?>

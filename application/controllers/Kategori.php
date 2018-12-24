@@ -8,7 +8,7 @@ class Kategori extends REST_Controller
 
     public function index_get()
     {
-        $data = $this->Kategori_model->getKategori();
+        $data = $this->Kategori_model->select(null, null);
         $this->response($data, 200);
     }
 }

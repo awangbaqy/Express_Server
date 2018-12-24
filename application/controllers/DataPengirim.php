@@ -1,14 +1,40 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class DataPengirim extends CI_Controller {
-
+class DataPengirim extends CI_Controller 
+{
 	public function __construct()
-    { parent::__construct(); }
+    { 
+        parent::__construct(); 
+        if ($this->session->user != 'admin')
+        { redirect('home'); }
+    }
 
     public function show()
 	{
-        $data['data'] = $this->Pengirim_model->getPengirim();
+        // Cek kolom combobox
+        if($this->uri->segment(3))
+        { $box = $this->uri->segment(3); }
+        else
+        {
+            if($this->input->post("kolom"))
+            { $box = $this->input->post("kolom"); }
+            else
+            { $box = 'null'; }
+        }
+
+        // Cek isi kotak
+        if($this->uri->segment(4))
+        { $search = $this->uri->segment(4); }
+        else
+        {
+            if($this->input->post("search"))
+            { $search = $this->input->post("search"); }
+            else
+            { $search = 'null'; }
+        }
+
+        $data['data'] = $this->Pengirim_model->select($box, $search);
         $this->load->view('admin/pengirim', $data);
     }
 
@@ -22,38 +48,29 @@ class DataPengirim extends CI_Controller {
             'hp' => $this->input->post('hp')
             ];
         
-        if ($this->Pengirim_model->postPengirim($data))
-        {
-            redirect('DataPengirim/show');
-        }
-        else
-        { $this->load->view('admin/pengirim', $data); }
-
+        $this->Pengirim_model->insert($data);
+        redirect('DataPengirim/show');
     }
 
-	public function update($id_pengirim)
+	public function update()
     {
         //Ambil Value
-        $id_pengirim=$this->input->post('id_pengirim');
+        $id=$this->input->post('id_pengirim');
         
 		$data = [
             'nama' => $this->input->post('nama'),
             'jenis_kelamin' => $this->input->post('jenis_kelamin'),
             'alamat' => $this->input->post('alamat'),
             'hp' => $this->input->post('hp')
-            ];
+        ];
 
-        if ($this->Pengirim_model->update($id_pengirim, $data))
-        { 
-            redirect('DataPengirim/update/'.$id_pengirim); 
-        } 
-        else
-        { redirect('admin/index'); }
+        $this->Pengirim_model->update($id, $data);
+        redirect('DataPengirim/show');
 	}
 	
-	public function destroy($id_pengirim)
+	public function destroy($id)
     {
-		if ($this->Pengirim_model->delete($id_pengirim))
-		{ redirect('admin/DataPengirim'); }
+        $this->Pengirim_model->delete($id);
+        redirect('DataPengirim/show');
     }
 }

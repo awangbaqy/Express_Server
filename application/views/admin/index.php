@@ -34,11 +34,6 @@
 						<li><a href="<?php echo site_url('DataPengiriman/show') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>
                 	</ul>
              	</div>
-				<div class="sidebar content-box" style="display: block;">
-					<ul class="nav">
-                        <li><a href="<?php echo site_url('admin/report') ?>"><i class="glyphicon glyphicon-book"></i> Laporan</a></li>
-                    </ul>
-				</div>
 		  	</div>
 
 		  	<div class="col-md-10">

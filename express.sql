@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2018 at 10:23 AM
+-- Generation Time: Dec 24, 2018 at 02:40 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -52,7 +52,7 @@ INSERT INTO `kategori` (`id_kategori`, `jenis`, `harga`) VALUES
 CREATE TABLE `paket` (
   `id_paket` int(11) NOT NULL,
   `nama_paket` varchar(50) NOT NULL,
-  `berat` int(3) NOT NULL,
+  `berat` float(11,1) NOT NULL,
   `id_pengiriman` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -61,11 +61,10 @@ CREATE TABLE `paket` (
 --
 
 INSERT INTO `paket` (`id_paket`, `nama_paket`, `berat`, `id_pengiriman`) VALUES
-(1, 'Camera NIKON', 5, 1),
-(5, 'SONY ALPHA A6000 Kit 16-50', 1, 7),
-(6, 'Samsung SCP-2370RH', 6, 7),
-(7, 'Go Pro Cam Full HD 1080P WIFI', 1, 8),
-(8, 'Samsung SCP-2370RH', 6, 8);
+(1, 'Camera NIKON', 5.0, 1),
+(9, 'CANON EOS 650 D KIT18-55 IS II (3 buah)', 1.5, 9),
+(10, 'Samsung SCP-2370RH (5 buah)', 30.0, 9),
+(13, 'VCD Wing Chun', 2.5, 10);
 
 -- --------------------------------------------------------
 
@@ -86,9 +85,8 @@ CREATE TABLE `pengirim` (
 --
 
 INSERT INTO `pengirim` (`id_pengirim`, `nama`, `jenis_kelamin`, `alamat`, `hp`) VALUES
-(1, 'Riza Awwalul', 'Laki-Laki', 'Surabaya', '082550055588'),
+(1, 'Riza Awwalul', 'Laki - Laki', 'Surabaya', '082550055588'),
 (2, 'Triska Intania', 'Perempuan', 'Malang', '082884145588'),
-(3, 'cob', 'Laki - Laki', '  asd\r\n                       ', '2'),
 (4, 'PT. Bakul Kamera', 'Laki - Laki', 'Kota Malang', '081234387282');
 
 -- --------------------------------------------------------
@@ -115,8 +113,8 @@ CREATE TABLE `pengiriman` (
 
 INSERT INTO `pengiriman` (`id_pengiriman`, `tgl_masuk`, `tgl_keluar`, `nama_penerima`, `alamat_penerima`, `total_harga`, `status`, `id_kategori`, `id_pengirim`) VALUES
 (1, '2018-12-03', '2018-12-04', 'Amanda', 'Jl. Rose No.32 Bandung', 45000, 'Dikirim', 1, 2),
-(7, '2018-12-16', '0000-00-00', 'user', 'user													', 245000, 'Dikemas', 1, 4),
-(8, '2018-12-17', '0000-00-00', 'riza', 'jalan jalan                   ', 140000, 'Dikemas', 2, 4);
+(9, '2018-12-21', '0000-00-00', 'riza', 'jalan jalan                   ', 630000, 'Dikemas', 2, 4),
+(10, '2018-12-23', '2018-12-24', 'Baqy', 'Jl. Samanhudi No. 68', 87500, 'Diterima', 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -154,22 +152,22 @@ ALTER TABLE `pengiriman`
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `paket`
 --
 ALTER TABLE `paket`
-  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `pengirim`
 --
 ALTER TABLE `pengirim`
-  MODIFY `id_pengirim` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pengirim` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `pengiriman`
 --
 ALTER TABLE `pengiriman`
-  MODIFY `id_pengiriman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;COMMIT;
+  MODIFY `id_pengiriman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

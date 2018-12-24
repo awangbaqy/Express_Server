@@ -45,11 +45,6 @@
                         <li class="current"><a href="<?php echo site_url('DataPengiriman/show') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>   	
                     </ul>
 				</div>
-				<div class="sidebar content-box" style="display: block;">
-					<ul class="nav">
-                        <li><a href="<?php echo site_url('admin/report') ?>"><i class="glyphicon glyphicon-book"></i> Laporan</a></li>
-                    </ul>
-				</div>
 			</div>
 
 			<div class="col-md-10">
@@ -65,19 +60,18 @@
 							<div class="panel-body">
 								<div class="row">
 									<form class="form-inline" action="<?php echo site_url('DataPengiriman/show') ?>" method="post">
-									<div class="col-md-6">
+									<div class="col-md-12">
 										<label for="Cari">Pencarian : </label>
 										<select class="form-control" id="kolom" name="kolom">
-											<option value="id_pengiriman">ID Transaksi</option>
-											<option value="nama_user">User</option>
-											<option value="bayar">Dibayar</option>
-											<option value="status">Diverifikasi</option>
+											<option value="pengiriman.id_pengiriman">ID Pengiriman</option>
+											<option value="nama_penerima">Penerima</option>
+											<option value="alamat_penerima">Tujuan</option>
+											<option value="status">Status</option>
+                                            <option value="jenis">Jenis Pengiriman</option>
+                                            <option value="nama">Pengirim</option>
 										</select>
 										<input class="form-control" type="text" id="search" name="search" value="" placeholder="Search...">
 										<button class="btn btn-default" type="submit" name="tombol" value="filter">Go</button>
-                                    </div>
-									<div class="col-md-6" align="right">
-                                        <button class="btn btn-default" type="submit" name="tombol" value="print"><span class="glyphicon glyphicon-print"></span></button>
                                     </div>
                                     </form>
                                 </div>
@@ -86,15 +80,70 @@
 									<thead>
 										<th>No</th>
 										<th class="text-center">ID Pengiriman</th>
-										<th class="text-center">Tanggal Masuk</th>
-										<th class="text-center">Tanggal Keluar</th>
+                                        <th>Nama Pengirim</th>
+                                        <th class="text-center">Detail</th>
 										<th>Nama Penerima</th>
 										<th>Alamat Penerima</th>
-                                        <th class="text-center">Total Pembayaran</th>
                                         <th class="text-center">Status</th>
-                                        <th class="text-center">Jenis Kategori</th>
-										<th>Nama Pengirim</th>
-										<th class="text-center">Action</th>
+										<th>
+                                            <!-- Tombol Modal Tambah-->
+                                            <button type="button" class="btn btn-info btn-sm glyphicon glyphicon-plus" data-toggle="modal" data-target="#ModalTambah"> Tambah</button>
+
+<!-- Modal Tambah -->
+<div id="ModalTambah" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><legend>Tambah Pengiriman</legend></h4>
+            </div>
+            <div class="modal-body">
+    <?php echo form_open('DataPengiriman/store') ?>
+                <fieldset>
+                    <div class="form-group">
+                        <label for="Name">Nama Penerima :</label>
+                        <input type="text" class="form-control" id="nama_penerima" name="nama_penerima"
+                            pattern="^[^-\s][a-zA-Z_\s-]{1,50}" required title="Harap diisi dengan huruf"
+                            placeholder="Masukkan nama ...">  
+                    </div>
+                    <div class="form-group">
+                        <label for="Alamat">Alamat Pnerima :</label>
+                        <textarea type="text" class="form-control" id="alamat_penerima" name="alamat_penerima"
+                            pattern="{1,1000}" required title="Harap diisi"
+                            placeholder="Masukkan alamat ..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="ID">Kategori :</label>
+		                <select class="form-control" id="id_kategori" name="id_kategori">
+                        <?php foreach ($dataKat as $dk) { ?>
+                            <option value="<?php echo $dk->id_kategori ?>"><?php echo $dk->jenis ?></option>
+                        <?php } ?>
+						</select>
+		            </div>
+                    <div class="form-group">
+                        <label for="ID">Pengirim :</label>
+		                <select class="form-control" id="id_pengirim" name="id_pengirim">
+                        <?php foreach ($dataPengirim as $dp) { ?>
+                            <option value="<?php echo $dp->id_pengirim ?>"><?php echo $dp->nama ?></option>
+                        <?php } ?>
+						</select>
+		            </div>
+                </fieldset>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="tambah">Tambah</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
+            </div>
+<?php echo form_close() ?>
+        </div>
+
+    </div>
+</div>
+<!-- Tutup Modal Tambah -->
+
+										</th>
 									</thead>
 <?php if(isset($data)) { ?>
 									<tbody>
@@ -102,17 +151,141 @@
 										<tr>
 											<td><?php echo $start+=1 ?></td>
 											<td align="center"><?php echo $row->id_pengiriman ?></td>
-											<td align="center"><?php echo date('j F Y', strtotime($row->tgl_masuk)) ?></td>
-											<td align="center"><?php echo date('j F Y', strtotime($row->tgl_keluar)) ?></td>
+                                            <td><?php echo $row->nama ?></td>
+                                            <td>
+												<!--Tombol Modal Detail-->
+												<a href="#bannerformmodal" data-toggle="modal" data-target="#modalDetail<?php echo $row->id_pengiriman ?>">Detail</a>
+										
+<!-- Modal Detail -->
+<div id="modalDetail<?php echo $row->id_pengiriman ?>" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+	<!-- Modal content-->
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Detail Pengiriman</h4>
+		</div>
+		<div class="modal-body">
+            <b>Tanggal Masuk :</b> <?php echo date('j F Y', strtotime($row->tgl_masuk)) ?>
+            <br>
+            <b>Tanggal Keluar :</b> <?php if ($row->tgl_keluar=="0000-00-00") { echo "Belum diterima"; } else { echo date('j F Y', strtotime($row->tgl_keluar)); } ?>
+            <br>
+            <b>Paket :</b>
+            <?php foreach ($dataDetail as $dd) { if ($row->id_pengiriman == $dd->id_pengiriman) { ?>
+                <br>- <?php echo $dd->nama_paket ?>
+            <?php } } ?>
+            <br>
+            <b>Jenis Pengiriman :</b> <?php echo $row->jenis ?>
+		</div>
+		<div class="modal-footer">
+			<div class="col-md-9" align='left'>
+                <b>Total Biaya :</b> Rp. <?php echo number_format( $row->total_harga ,0,",","."); ?>,-
+			</div>
+			<div class="col-md-3">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>
+<!-- Tutup Modal Detail-->
+
+											</td>
 											<td><?php echo $row->nama_penerima ?></td>
 											<td><?php echo $row->alamat_penerima ?></td>
-											<td align="right">
-												Rp. <?php echo number_format( $row->total_harga ,0,",","."); ?>,-
-											</td>
 											<td><?php echo $row->status ?></td>
-											<td><?php echo $row->jenis ?></td>
-											<td><?php echo $row->nama ?></td>
-											<td align="center">
+											<td>
+                                            
+                                            <?php if ($row->status != 'Diterima' ) { ?>
+                                            <!-- Tombol Modal Ubah-->
+                                            <button type="button" class="btn btn-info btn-sm glyphicon glyphicon-pencil" data-toggle="modal" data-target="#ModalUbah<?php echo $row->id_pengiriman ?>"></button>
+                                            <?php } ?>
+
+<!-- Modal Ubah -->
+<div id="ModalUbah<?php echo $row->id_pengiriman ?>" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><legend>Edit Pengiriman</legend></h4>
+            </div>
+            <div class="modal-body">
+<?php echo form_open('DataPengiriman/update/'); echo form_hidden('id_pengiriman', $row->id_pengiriman); ?>
+                <?php $ro=''; if ($row->status == 'Dikirim') { $ro='readonly'; } ?>
+                <fieldset>
+                    <div class="form-group">
+                        <label for="Status">Status :</label>
+		                <select class="form-control" id="status" name="status">
+                            <option value="Dikemas" <?php echo $s = ($row->status == 'Dikemas') ? 'selected' : ''; ?>>Dikemas</option>
+                            <option value="Dikirim" <?php echo $s = ($row->status == 'Dikirim') ? 'selected' : ''; ?>>Dikirim</option>
+                            <option value="Diterima" <?php echo $s = ($row->status == 'Diterima') ? 'selected' : ''; ?>>Diterima</option>
+						</select>
+		            </div>
+                    <hr style="height:1.5px;border:none;color:#333;background-color:#333;" />
+                    <div class="form-group">
+                        <label for="Name">Nama Penerima :</label>
+                        <input type="text" class="form-control" id="nama_penerima" name="nama_penerima"
+                            pattern="^[^-\s][a-zA-Z_\s-]{1,50}" required title="Harap diisi dengan huruf" <?php echo $ro; ?>
+                            placeholder="Masukkan nama ..." value="<?php echo $row->nama_penerima ?>">
+                    </div> 
+                    <div class="form-group">
+                        <label for="Alamat">Alamat Penerima :</label>
+                        <textarea type="text" class="form-control" id="alamat_penerima" name="alamat_penerima"
+                            pattern="{1,1000}" required title="Harap diisi" <?php echo $ro; ?>
+                            placeholder="Masukkan alamat ..."><?php echo $row->alamat_penerima ?></textarea>
+                    </div>
+
+                    <?php if (empty($ro)) { ?>
+
+                    <div class="form-group">
+                        <label for="ID">Kategori :</label>
+		                <select class="form-control" id="id_kategori" name="id_kategori">
+                        <?php foreach ($dataKat as $dk) { $s=''; if ($dk->id_kategori == $row->id_kategori) { $s='selected'; } ?>
+                            <option value="<?php echo $dk->id_kategori ?>" <?php echo $s ?>><?php echo $dk->jenis ?></option>
+                        <?php } ?>
+						</select>
+		            </div>
+                    <div class="form-group">
+                        <label for="ID">Pengirim :</label>
+		                <select class="form-control" id="id_pengirim" name="id_pengirim">
+                        <?php foreach ($dataPengirim as $dp) { $s=''; if ($dp->id_pengirim == $row->id_pengirim) { $s='selected'; } ?>
+                            <option value="<?php echo $dp->id_pengirim ?>" <?php echo $s ?>><?php echo $dp->nama ?></option>
+                        <?php } ?>
+						</select>
+		            </div>
+
+                    <?php } else { ?>
+
+                    <div class="form-group">
+                        <label for="ID">Kategori :</label>
+                        <input type="hidden" id="id_kategori" name="id_kategori" value="<?php echo $row->id_kategori ?>">
+                        <input type="text" class="form-control" value="<?php echo $row->jenis ?>" readonly >
+		            </div>
+                    <div class="form-group">
+                        <label for="ID">Pengirim :</label>
+                        <input type="hidden" id="id_pengirim" name="id_pengirim" value="<?php echo $row->id_pengirim ?>">
+                        <input type="text" class="form-control" value="<?php echo $row->nama ?>" readonly >
+		            </div>
+
+                    <?php } ?>
+
+                </fieldset>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="ubah">Ubah</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
+            </div>
+<?php echo form_close() ?>
+        </div>
+
+    </div>
+</div>
+<!-- Tutup Modal Ubah -->
+
 												<a href="<?php echo site_url('DataPengiriman/destroy/'.$row->id_pengiriman) ?>" type="button" class="btn btn-danger btn-sm glyphicon glyphicon-trash"
 													onclick="return confirm('Apakah anda yakin?')"></a>
 											</td>

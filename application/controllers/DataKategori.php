@@ -1,14 +1,40 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class DataKategori extends CI_Controller {
-
+class DataKategori extends CI_Controller 
+{
 	public function __construct()
-    { parent::__construct(); }
+    { 
+        parent::__construct(); 
+        if ($this->session->user != 'admin')
+        { redirect('home'); }
+    }
 
     public function show()
 	{
-        $data['data'] = $this->Kategori_model->getKategori();
+        // Cek kolom combobox
+        if($this->uri->segment(3))
+        { $box = $this->uri->segment(3); }
+        else
+        {
+            if($this->input->post("kolom"))
+            { $box = $this->input->post("kolom"); }
+            else
+            { $box = 'null'; }
+        }
+
+        // Cek isi kotak
+        if($this->uri->segment(4))
+        { $search = $this->uri->segment(4); }
+        else
+        {
+            if($this->input->post("search"))
+            { $search = $this->input->post("search"); }
+            else
+            { $search = 'null'; }
+        }
+
+        $data['data'] = $this->Kategori_model->select($box, $search);
         $this->load->view('admin/kategori', $data);
     }
 
@@ -17,38 +43,31 @@ class DataKategori extends CI_Controller {
         // Insert data
         $data = [
             'jenis' => $this->input->post('jenis'),
-            'harga'    => $this->input->post('harga')
+            'harga' => $this->input->post('harga')
         ];
-        if ($this->Kategori_model->postKategori($data))
-        {
-            redirect('DataKategori/show');
-        }
-        else
-        { $this->load->view('admin/kategori', $data); }
+        
+        $this->Kategori_model->insert($data);
 
+        redirect('DataKategori/show');
     }
 
-	public function update($id_kategori)
+	public function update()
     {
         //Ambil Value
-        $id_kategori=$this->input->post('id_kategori');
+        $id=$this->input->post('id_kategori');
 
 		$data = [
             'jenis' => $this->input->post('jenis'),
-            'harga'    => $this->input->post('harga')
+            'harga' => $this->input->post('harga')
         ];
         
-        if ($this->Kategori_model->update($id_kategori, $data))
-        { 
-            redirect('DataKategori/update/'.$id_kategori); 
-        } 
-        else
-        { redirect('admin/index'); }
+        $this->Kategori_model->update($id, $data);
+        redirect('datakategori/show');
 	}
 	
-	public function destroy($id_kategori)
+	public function destroy($id)
     {
-		if ($this->Kategori_model->delete($id_kategori))
-		{ redirect('admin/DataKategori'); }
+		$this->Kategori_model->delete($id);
+		redirect('DataKategori/show');
     }
 }

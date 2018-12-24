@@ -20,15 +20,15 @@
     </script>
     <!--//meta tags ends here-->
     <!--booststrap-->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="<?php echo base_url() ?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     <!--//booststrap end-->
     <!-- font-awesome icons -->
-    <link href="assets/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="<?php echo base_url() ?>assets/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
     <!-- //font-awesome icons -->
-    <link href="assets/css/blast.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style10.css" />
+    <link href="<?php echo base_url() ?>assets/css/blast.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/style10.css" />
     <!--stylesheets-->
-    <link href="assets/css/style.css" rel='stylesheet' type='text/css' media="all">
+    <link href="<?php echo base_url() ?>assets/css/style.css" rel='stylesheet' type='text/css' media="all">
     <!--//stylesheets-->
     <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Merriweather:300,400,700,900" rel="stylesheet">
@@ -56,11 +56,11 @@
               <ul>
                 <li>
                   <span class="fas fa-phone-volume" ></span>
-                  <p>+(000)123 4565 32</p>
+                  <p>+(0341) 555 0088</p>
                 </li>
                 <li>
                   <span class="fas fa-envelope"></span>
-                  <p><a href="mailto:info@example.com">info@example1.com</a></p>
+                  <p><a href="mailto:info@example.com">express@delivery.com</a></p>
                 </li>
                 <li>
                 </li>
@@ -118,7 +118,7 @@
               <div class="slider-img one-img">
                 <div class="container">
                   <div class="slider-info text-left">
-                    <img src="assets/images/admin.png" style="width:80px; height:80px;">
+                    <img src="<?php echo base_url() ?>assets/images/admin.png" style="width:80px; height:80px;">
                     <h4>Admin</h4>
                     <h5>Delivery Express</h5><br>
                     <div class="outs_more-buttn" >
@@ -132,7 +132,7 @@
               <div class="slider-img two-img">
                 <div class="container">
                   <div class="slider-info text-left">
-                    <img src="assets/images/admin.png" style="width:80px; height:80px;">
+                    <img src="<?php echo base_url() ?>assets/images/admin.png" style="width:80px; height:80px;">
                     <h4>Admin</h4>
                     <h5>Delivery Express</h5><br>
                     <div class="outs_more-buttn">
@@ -146,7 +146,7 @@
               <div class="slider-img three-img">
                 <div class="container">
                   <div class="slider-info text-left">
-                    <img src="assets/images/admin.png" style="width:80px; height:80px;">
+                    <img src="<?php echo base_url() ?>assets/images/admin.png" style="width:80px; height:80px;">
                     <h4>Admin</h4>
                     <h5>Delivery Express</h5><br>
                     <div class="outs_more-buttn">
@@ -167,12 +167,12 @@
     </div>
     <!-- //banner -->
     <!--about-->
-    <section class="pt-md-5 pt-sm-4 pt-3">
+    <!-- <section class="pt-md-5 pt-sm-4 pt-3">
       <div class="container-fluid ">
-        <div class="main row ">
+        <div class="main row "> -->
           <!-- TENTH EXAMPLE -->
-          <div class="col-lg-4 view view-tenth">
-            <img src="assets/images/logo.jpg" alt="" class="img-fluid">
+          <!-- <div class="col-lg-4 view view-tenth">
+            <img src="<?php echo base_url() ?>assets/images/logo.jpg" alt="" class="img-fluid">
             <div class="mask">
               <h3 data-blast="bgColor">Success</h3>
               <p>Vivamus sed poritor felis.ntesque habitant morbi senectus et netus</p>
@@ -180,7 +180,7 @@
             </div>
           </div>
           <div class="col-lg-4 view view-tenth">
-            <img src="assets/images/ab2.jpg" alt="" class="img-fluid">
+            <img src="<?php echo base_url() ?>assets/images/ab2.jpg" alt="" class="img-fluid">
             <div class="mask">
               <h3 data-blast="bgColor">Hard Work</h3>
               <p>Vivamus sed poritor felis.ntesque habitant morbi senectus et netus</p>
@@ -188,7 +188,7 @@
             </div>
           </div>
           <div class="col-lg-4 view view-tenth">
-            <img src="assets/images/ab3.jpg" alt="" class="img-fluid">
+            <img src="<?php echo base_url() ?>assets/images/ab3.jpg" alt="" class="img-fluid">
             <div class="mask">
               <h3 data-blast="bgColor">Admission</h3>
               <p>Vivamus sed poritor felis.ntesque habitant morbi senectus et netus</p>
@@ -197,41 +197,41 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="about" id="about">
       <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
         <!--Horizontal Tab-->
         <div id="horizontalTab">
           <ul class="resp-tabs-list justify-content-center">
-            <li data-blast="bgColor">About</li>
-            <li data-blast="bgColor">Admission</li>
-            <li data-blast="bgColor">Mission</li>
+            <li data-blast="bgColor">Tentang</li>
+            <li data-blast="bgColor">Visi</li>
+            <li data-blast="bgColor">Misi</li>
           </ul>
           <div class="resp-tabs-container">
             <div class="tab1" >
               <div class="row mt-lg-4 mt-3">
                 <div class="col-md-7 latest-list">
                   <div class="about-jewel-agile-left">
-                    <h4 class="mb-3" data-blast="color">Express Delivery </h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque</p>
-                    <h5 data-blast="color"> Who we are</h5>
+                    <h4 class="mb-3" data-blast="color">Tentang Kami</h4>
+                    <p>Express Delivery merupakan perusahaan yang bergerak dalam bidang pengiriman dan logistik yang bermarkas di Malang, Jawa Timur. Nama resminya adalah PT. Express Delivery.</p>
+                    <h5 data-blast="color"></h5>
                   </div>
                 </div>
                 <div class="col-md-5 about-txt-img">
-                  <img src="assets/images/logo.jpg" class="img-thumbnail" alt="">
+                  <img src="<?php echo base_url() ?>assets/images/logo.jpg" class="img-thumbnail" alt="">
                 </div>
               </div>
             </div>
             <div class="tab2">
               <div class="row mt-lg-4 mt-3">
                 <div class="col-md-5 about-txt-img">
-                  <img src="assets/images/ab3.jpg" class="img-thumbnail" alt="">
+                  <img src="<?php echo base_url() ?>assets/images/logo.jpg" class="img-thumbnail" alt="">
                 </div>
                 <div class="col-md-7 latest-list">
                   <div class="about-jewel-agile-left">
-                    <h4 class="mb-3" data-blast="color"> ipsum dolor</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque</p>
-                    <h5 data-blast="color">What We do</h5>
+                    <h4 class="mb-3" data-blast="color">Visi</h4>
+                    <p>Untuk menjadi perusahaan rantai pasok global terdepan di dunia.</p>
+                    <h5 data-blast="color"></h5>
                   </div>
                 </div>
               </div>
@@ -240,26 +240,26 @@
               <div class="row mt-lg-4 mt-3">
                 <div class="col-md-7 latest-list">
                   <div class="about-jewel-agile-left">
-                    <h4 class="mb-3" data-blast="color">Lorem ipsum</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque</p>
-                    <h5 data-blast="color">What Our Vision</h5>
+                    <h4 class="mb-3" data-blast="color">Misi</h4>
+                    <p>Untuk memberi pengalaman terbaik kepada pelanggan secara konsisten</p>
+                    <h5 data-blast="color"></h5>
                   </div>
                 </div>
                 <div class="col-md-5 about-txt-img">
-                  <img src="images/ab2.jpg" class="img-thumbnail" alt="">
+                  <img src="<?php echo base_url() ?>assets/images/logo.jpg" class="img-thumbnail" alt="">
                 </div>
               </div>
             </div>
             <div class="tab4">
               <div class="row mt-lg-4 mt-3">
                 <div class="col-md-5 about-txt-img">
-                  <img src="images/ab1.jpg" class="img-thumbnail" alt="">
+                  <img src="<?php echo base_url() ?>assets/images/ab1.jpg" class="img-thumbnail" alt="">
                 </div>
                 <div class="col-md-7 latest-list">
                   <div class="about-jewel-agile-left">
-                    <h4 class="mb-3" data-blast="color"> ipsum dolor</h4>
+                    <h4 class="mb-3" data-blast="color">Misi</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta</p>
-                    <h5 data-blast="color">What Our Mission</h5>
+                    <h5 data-blast="color"></h5>
                   </div>
                 </div>
               </div>
@@ -278,11 +278,11 @@
             <div class="white-shadow">
               <div class="text-wls-ser-bake">
                 <!--service ECONOMY-->
-                <span class="fas fa-address-book banner-icon" data-blast="color"></span>
+                <span class="fab fa-cloudscale banner-icon" data-blast="color"></span>
               </div>
               <div class="ser-inner-info">
                 <h4 class="my-3">Economy</h4>
-                <p>jenis layanan pengiriman ekonomi</p>
+                <p>Jenis layanan pengiriman ekonomi</p>
               </div>
             </div>
           </div>
@@ -290,11 +290,11 @@
             <div class="white-shadow">
               <div class="text-wls-ser-bake">
                 <!--service STANDARD-->
-                <span class="fas fa-book banner-icon" data-blast="color"></span>
+                <span class="fab fa-cloudscale banner-icon" data-blast="color"></span>
               </div>
               <div class="ser-inner-info">
                 <h4 class="my-3">Standard</h4>
-                <p>jenis layanan pengiriman biasa</p>
+                <p>Jenis layanan pengiriman standard</p>
               </div>
             </div>
           </div>
@@ -306,7 +306,7 @@
               </div>
               <div class="ser-inner-info">
                 <h4 class="my-3">Fast</h4>
-                <p>jenis layanan pengiriman cepat</p>
+                <p>Jenis layanan pengiriman cepat</p>
               </div>
             </div>
           </div>
@@ -317,7 +317,7 @@
               </div>
               <div class="ser-inner-info">
                 <h4 class="my-3">5 hari</h4>
-                <p>Harga pengiriman = Rp.10.000,00</p>
+                <p>Biaya pengiriman = Rp. 10.000,- / kg</p>
               </div>
             </div>
           </div>
@@ -328,7 +328,7 @@
               </div>
               <div class="ser-inner-info">
                 <h4 class="my-3">3 hari</h4>
-                <p>Harga pengiriman = Rp.20.000,00</p>
+                <p>Biaya pengiriman = Rp. 20.000,- / kg</p>
               </div>
             </div>
           </div>
@@ -339,7 +339,7 @@
               </div>
               <div class="ser-inner-info">
                 <h4 class="my-3">1 hari</h4>
-                <p>Harga pengiriman = Rp.35.000,00</p>
+                <p>Biaya pengiriman = Rp. 35.000,- / kg</p>
               </div>
             </div>
           </div>
@@ -348,13 +348,13 @@
     </section>
     <!--//service-->
     <!--blog -->
-    <section class="blog py-lg-4 py-md-3 py-sm-3 py-3" id="blog">
+    <!-- <section class="blog py-lg-4 py-md-3 py-sm-3 py-3" id="blog">
       <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
         <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Our Blog </h3>
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex">
             <div class="clients-color">
-              <img src="assets/images/ab3.jpg" class="img-fluid" alt="">
+              <img src="<?php echo base_url() ?>assets/images/ab3.jpg" class="img-fluid" alt="">
               <div class="blog-txt-info">
                 <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Quisque a rhoncus </a></h4>
                 <div class="news-date my-3">
@@ -372,7 +372,7 @@
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6  blog-grid-flex">
             <div class="clients-color">
-              <img src="images/ab1.jpg" class="img-fluid" alt="">
+              <img src="<?php echo base_url() ?>assets/images/ab1.jpg" class="img-fluid" alt="">
               <div class="blog-txt-info">
                 <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Quisque a rhoncus </a></h4>
                 <div class="news-date my-3">
@@ -390,7 +390,7 @@
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex">
             <div class="clients-color">
-              <img src="images/ab2.jpg" class="img-fluid" alt="">
+              <img src="<?php echo base_url() ?>assets/images/ab2.jpg" class="img-fluid" alt="">
               <div class="blog-txt-info">
                 <h4 class="mt-2"><a href="#" data-toggle="modal" data-target="#exampleModalLive" data-blast="color">Quisque a rhoncus </a></h4>
                 <div class="news-date my-3">
@@ -411,10 +411,10 @@
           
         </div>
       </div>
-    </section>
+    </section> -->
     <!--//blog -->
     <!--Subscribe-->
-    <section class="py-md-5 py-sm-4 py-3">
+    <!-- <section class="py-md-5 py-sm-4 py-3">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-6 subscrib-w3layouts text-center">
@@ -432,10 +432,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!--//Subscribe-->
     <!--stats-->
-    <section class="stats py-lg-4 py-md-3 py-sm-3 py-3" id="stats">
+    <!-- <section class="stats py-lg-4 py-md-3 py-sm-3 py-3" id="stats">
       <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
         <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Our Stats </h3>
         <div class="jst-must-info text-center">
@@ -475,17 +475,17 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!--//stats-->
     <!--Team-->
     <section class="team py-lg-4 py-md-3 py-sm-3 py-3" id="team">
       <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
-        <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Our Staff </h3>
-        <div class="row ">
+        <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Staf Kami</h3>
+        <div class="row justify-content-center">
           <div class="col-lg-2 col-md-2 col-sm-2 profile">
             <div class="team-shadow">
               <div class="img-box">
-                <img src="assets/images/t3.jpg" alt="">
+                <img src="<?php echo base_url() ?>assets/images/triza.jpg" alt="">
                 <div class="list-social-icons">
                   <ul>
                     <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
@@ -504,7 +504,7 @@
           <div class="col-lg-2 col-md-2 col-sm-2 profile">
             <div class="team-shadow">
               <div class="img-box">
-                <img src="assets/images/t3.jpg" alt="">
+                <img src="<?php echo base_url() ?>assets/images/ttriska.jpg" alt="">
                 <div class="list-social-icons">
                   <ul>
                     <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
@@ -537,7 +537,7 @@
             <div class="addres-office-hour text-center" >
               <ul>
                 <li class="mb-2">
-                  <h6 data-blast="color">Address</h6>
+                  <h6 data-blast="color">Alamat</h6>
                 </li>
                 <li>
                   <p>Jl. Soekarno Hatta Malang<br>Jawa Timur, Indonesia.</p>
@@ -545,7 +545,7 @@
               </ul>
               <ul>
                 <li class="mt-lg-4 mt-3">
-                  <h6 data-blast="color">Phone</h6>
+                  <h6 data-blast="color">Telepon</h6>
                 </li>
                 <li class="mt-2">
                   <p>(0341) 555 0088</p>
@@ -554,7 +554,7 @@
                   <h6 data-blast="color">Email</h6>
                 </li>
                 <li class="mt-2">
-                  <p><a href="mailto:info@example.com">express@example.com</a></p>
+                  <p><a href="mailto:info@example.com">express@delivery.com</a></p>
                 </li>
               </ul>
             </div>
@@ -562,19 +562,45 @@
           <div class="col-md-7 contact-form">
           <br>
           <br>
-          <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Mengecek Paket</h3>
-            <form action="#" method="post">
+          <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Cek Paket</h3>
+            <form action="<?php echo base_url('home') ?>" method="post">
               <div class="row text-center contact-wls-detail">
                 
               </div>
               <div class="form-group contact-forms">
-                <input type="text" class="form-control" placeholder="ID Pengirim" required="">
+                <input type="text" class="form-control" name="search" placeholder="Masukka ID Pengirim....">
               </div>
               
               <div class="sent-butnn text-center">
-                <button type="submit" class="btn btn-block" data-blast="bgColor">Send</button>
+                <button type="submit" name="submit" class="btn btn-block" data-blast="bgColor">Cari</button>
               </div>
             </form>
+            <br>
+            <br>
+            <?php if(!empty($data)) { ?>
+            <table class="table table-bordered" style="background-color:white">
+                <thead>
+                    <th>ID</th>
+                    <th>Tanggal Masuk</th>
+                    <th>Tujuan</th>
+                    <th>Jenis</th>
+                    <th>Tanggal Terima</th>
+                    <th>Status</th>
+                </thead>
+                <tbody>
+                    <td><?php echo $data->id_pengiriman ?></td>
+                    <td><?php echo $data->tgl_masuk ?></td>
+                    <td>
+                        <b><?php echo $data->nama_penerima ?></b>
+                        <br>
+                        <?php echo $data->alamat_penerima ?>
+                    </td>
+                    <td><?php echo $data->jenis ?></td>
+                    <td><?php if ($data->tgl_keluar=="0000-00-00") { echo "Belum diterima"; } else { echo date('j F Y', strtotime($data->tgl_keluar)); } ?></td>
+                    <td><b><?php echo $data->status ?></b></td>
+                </tbody>
+            </table>
+            <?php } ?>
           </div>
         </div>
       </div>
@@ -584,11 +610,11 @@
     <section class="footer py-lg-4 py-md-3 py-sm-3 py-3">
       <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
         <div class="row ">
-          <div class="dance-agile-info col-lg-3 col-md-6 col-sm-6">
+          <!-- <div class="dance-agile-info col-lg-3 col-md-6 col-sm-6">
             <h4 class="pb-lg-3 pb-3" data-blast="color">Blog</h4>
             <div class="footer-grid row mb-3">
               <div class="col-lg-5 col-md-6 col-sm-6 col-5">
-                <img src="assets/images/bb1.jpg" alt=" " class="img-fluid">
+                <img src="<?php echo base_url() ?>assets/images/bb1.jpg" alt=" " class="img-fluid">
               </div>
               <div class="col-lg-7 col-md-6 col-sm-6 col-7 bottom-para px-0">
                 <h6><a href="#" data-toggle="modal" data-target="#exampleModalLive">ultricies nec,pellen eu,pretium quis,</a></h6>
@@ -602,7 +628,7 @@
             </div>
             <div class="footer-grid row mb-3">
               <div class="col-lg-5 col-md-6 col-sm-6 col-5">
-                <img src="assets/images/bb2.jpg" alt=" " class="img-fluid">
+                <img src="<?php echo base_url() ?>assets/images/bb2.jpg" alt=" " class="img-fluid">
               </div>
               <div class="col-lg-7 col-md-6 col-sm-6 col-7 bottom-para px-0">
                 <h6><a href="#" data-toggle="modal" data-target="#exampleModalLive">ultricies nec,pellen eu,pretium quis,</a></h6>
@@ -616,7 +642,7 @@
             </div>
             <div class="footer-grid row">
               <div class="col-lg-5 col-md-6 col-sm-6 col-5">
-                <img src="images/bb3.jpg" alt=" " class="img-fluid">
+                <img src="<?php echo base_url() ?>assets/images/bb3.jpg" alt=" " class="img-fluid">
               </div>
               <div class="col-lg-7 col-md-6 col-sm-6 col-7 bottom-para px-0">
                 <h6><a href="#" data-toggle="modal" data-target="#exampleModalLive">ultricies nec,pellen eu,pretium quis,</a></h6>
@@ -628,88 +654,90 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="dance-agile-info col-lg-3 col-md-6 col-sm-6">
-            <h4 class="pb-lg-4 pb-md-3 pb-3 text-uppercase" data-blast="color">Contact Us</h4>
+          </div> -->
+          <div class="dance-agile-info col-lg-6 col-md-6 col-sm-6">
+            <h4 class="pb-lg-4 pb-md-3 pb-3 text-uppercase" data-blast="color">Lokasi Kami</h4>
             <div class="address_mail_footer_grids">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3539.812628729253!2d153.014155!3d-27.4750921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a0835840a2f%3A0xdd5e3f5c208dc0e1!2sMelbourne+St%2C+South+Brisbane+QLD+4101%2C+Australia!5e0!3m2!1sen!2sin!4v1492257477691"></iframe>
+                <div style="width: 300px"><iframe width="300" height="300" src="https://maps.google.com/maps?width=300&amp;height=300&amp;hl=en&amp;coord=-7.9465289,112.6133481&amp;q=Malang%2C%20Jawa%20Timur+(PT.%20Express%20Delivery)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Draw map route</a></iframe></div><br />
+              
+              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3539.812628729253!2d153.014155!3d-27.4750921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a0835840a2f%3A0xdd5e3f5c208dc0e1!2sMelbourne+St%2C+South+Brisbane+QLD+4101%2C+Australia!5e0!3m2!1sen!2sin!4v1492257477691"></iframe> -->
             </div>
           </div>
-          <div class="dance-agile-info col-lg-3 col-md-6 col-sm-6">
-            <h4 class="pb-lg-4 pb-md-3 pb-3 text-uppercase" data-blast="color">Twitter Us</h4>
+          <div class="dance-agile-info col-lg-6 col-md-6 col-sm-6">
+            <h4 class="pb-lg-4 pb-md-3 pb-3 text-uppercase" data-blast="color">Kontak Kami</h4>
             <div class="footer-office-hour">
               <ul>
                 <li>
-                  <p>sit amet consectetur adipiscing</p>
+                  <p>Malang, Jawa Timur</p>
                 </li>
                 <li class="my-1">
-                  <p><a href="mailto:info@example.com" data-blast="color">http://example.com</a> sit amet</p>
+                  <p><a href="mailto:info@example.com" data-blast="color">express@delivery.com</a></p>
                 </li>
-                <li class="mb-lg-4 mb-md-3 mb-3"><span>Posted 3 days ago.</span></li>
-                <li>
+                <li class="mb-lg-4 mb-md-3 mb-3"><span>(0341) 555 0088</span></li>
+                <!-- <li>
                   <p>sit amet consectetur adipiscing</p>
                 </li>
                 <li class="my-1">
                   <p><a href="mailto:info@example.com" data-blast="color">http://mail.com</a> sit amet</p>
                 </li>
-                <li><span>Posted 3 days ago.</span></li>
+                <li><span>Posted 3 days ago.</span></li> -->
               </ul>
             </div>
           </div>
-          <div class="dance-agile-info col-lg-3 col-md-6 col-sm-6">
+          <!-- <div class="dance-agile-info col-lg-3 col-md-6 col-sm-6">
             <h4 class="pb-lg-3 pb-3" data-blast="color">Our Posts</h4>
             <div class="footer-post d-flex mb-2">
               <div class="agileinfo_footer_grid1 mr-2">
                 <a href="#blog" class=" scroll">
-                <img src="assets/images/f1.jpg" alt=" " class="img-fluid">
+                <img src="<?php echo base_url() ?>assets/images/f1.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
               <div class="agileinfo_footer_grid1 mr-2">
                 <a href="#blog" class="scroll">
-                <img src="assets/images/f2.jpg" alt=" " class="img-fluid">
+                <img src="<?php echo base_url() ?>assets/images/f2.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
               <div class="agileinfo_footer_grid1">
                 <a href="#blog" class="scroll">
-                <img src="assets/images/f3.jpg" alt=" " class="img-fluid">
+                <img src="<?php echo base_url() ?>assets/images/f3.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
             </div>
             <div class="footer-post d-flex mb-2">
               <div class="agileinfo_footer_grid1 mr-2">
                 <a href="#blog" class="scroll">
-                <img src="assets/images/f3.jpg" alt=" " class="img-fluid">
+                <img src="<?php echo base_url() ?>assets/images/f3.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
               <div class="agileinfo_footer_grid1 mr-2">
                 <a href="#blog" class=" scroll">
-                <img src="assets/images/f2.jpg" alt=" " class="img-fluid">
+                <img src="<?php echo base_url() ?>assets/images/f2.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
               <div class="agileinfo_footer_grid1">
                 <a href="#blog" class=" scroll">
-                <img src="images/f1.jpg" alt=" " class="img-fluid">
+                <img src="<?php echo base_url() ?>assets/images/f1.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
             </div>
             <div class="footer-post d-flex">
               <div class="agileinfo_footer_grid1 mr-2">
                 <a href="#blog" class="scroll">
-                <img src="images/f2.jpg" alt=" " class="img-fluid">
+                <img src="<?php echo base_url() ?>assets/images/f2.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
               <div class="agileinfo_footer_grid1 mr-2">
                 <a href="#blog" class=" scroll">
-                <img src="images/f3.jpg" alt=" " class="img-fluid">
+                <img src="<?php echo base_url() ?>assets/images/f3.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
               <div class="agileinfo_footer_grid1">
                 <a href="#blog" class=" scroll">
-                <img src="images/f1.jpg" alt=" " class="img-fluid">
+                <img src="<?php echo base_url() ?>assets/images/f1.jpg" alt=" " class="img-fluid">
                 </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -767,9 +795,9 @@
             <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form action="<?php echo site_url('admin/login') ?>" method="post" id="forum">
+          <form action="<?php echo site_url('home/login') ?>" method="post" id="forum">
           <div class="modal-body">
-            <img src="assets/images/logo.jpg" alt="" class="img-fluid">
+            <img src="<?php echo base_url() ?>assets/images/logo.jpg" alt="" class="img-fluid">
             <p>
               <input class="form-control" type="text" id="user" name="user"
                     pattern="^[^\s]+$" required title="Harap diisi dengan benar"
@@ -791,13 +819,13 @@
     
     <!--//model-->
     <!--js working-->
-    <script src='assets/js/jquery-2.2.3.min.js'></script>
+    <script src='<?php echo base_url() ?>assets/js/jquery-2.2.3.min.js'></script>
     <!--//js working--> 
     <!--blast colors change-->
-    <script src="assets/js/blast.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/blast.min.js"></script>
     <!--//blast colors change-->
     <!--responsiveslides banner-->
-    <script src="assets/js/responsiveslides.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/responsiveslides.min.js"></script>
     <script>
       // You can also use "$(window).load(function() {"
       $(function () {
@@ -820,7 +848,7 @@
     </script>
     <!--// responsiveslides banner-->		  
     <!--responsive tabs-->	 
-    <script src="assets/js/easy-responsive-tabs.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/easy-responsive-tabs.js"></script>
     <script>
       $(document).ready(function () {
       $('#horizontalTab').easyResponsiveTabs({
@@ -841,15 +869,15 @@
     </script>
     <!--// responsive tabs-->	
     <!--About OnScroll-Number-Increase-JavaScript -->
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/jquery.countup.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/jquery.waypoints.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/jquery.countup.js"></script>
     <script>
       $('.counter').countUp();
     </script>
     <!-- //OnScroll-Number-Increase-JavaScript -->	  
     <!-- start-smoth-scrolling -->
-    <script src="assets/js/move-top.js"></script>
-    <script src="assets/js/easing.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/move-top.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/easing.js"></script>
     <script>
       jQuery(document).ready(function ($) {
       	$(".scroll").click(function (event) {
@@ -881,7 +909,7 @@
     </script>
     <!-- //here ends scrolling icon -->
     <!--bootstrap working-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
     <!-- //bootstrap working-->
   </body>
 </html>

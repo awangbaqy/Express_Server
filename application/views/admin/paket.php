@@ -42,13 +42,8 @@
 		                <li><a href="<?php echo site_url('DataKategori/show') ?>"><i class="glyphicon glyphicon-list"></i> Kategori</a></li>
 						<li class="current"><a href="<?php echo site_url('DataPaket/show') ?>"><i class="glyphicon glyphicon-lock"></i> Paket</a></li>
 						<li><a href="<?php echo site_url('DataPengirim/show') ?>"><i class="glyphicon glyphicon-user"></i> Pengirim</a></li>
-                        <li><a href="<?php echo site_url('DataPengiriman') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>
+                        <li><a href="<?php echo site_url('DataPengiriman/show') ?>"><i class="glyphicon glyphicon-envelope"></i> Pengiriman</a></li>
                 	
-                    </ul>
-				</div>
-				<div class="sidebar content-box" style="display: block;">
-					<ul class="nav">
-                        <li><a href="<?php echo site_url('admin/report') ?>"><i class="glyphicon glyphicon-book"></i> Laporan</a></li>
                     </ul>
 				</div>
 			</div>
@@ -66,28 +61,27 @@
 							<div class="panel-body">
                                 <div class="row">
                                     <form class="form-inline" action="<?php echo site_url('DataPaket/show') ?>" method="post">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <label for="Cari">Pencarian : </label>
                                         <select class="form-control" id="kolom" name="kolom">
-                                            <option value="nama">Nama</option>
-                                            <option value="jenis_kelamin">Jenis Kelamin</option>
-                                            <option value="hp">HP</option>
+                                            <option value="id_paket">ID Paket</option>
+                                            <option value="nama_paket">Nama Paket</option>
+                                            <option value="berat">Berat</option>
+                                            <option value="id_pengiriman">ID Pengiriman</option>
                                         </select>
                                         <input class="form-control" type="text" id="search" name="search" value="" placeholder="Search...">
                                         <button class="btn btn-default" type="submit" name="tombol" value="filter">Go</button>
-                                    </div>
-									<div class="col-md-6" align="right">
-                                        <button class="btn btn-default" type="submit" name="tombol" value="print"><span class="glyphicon glyphicon-print"></span></button>
                                     </div>
                                     </form>
                                 </div>
 
 								<table class="table table-striped">
 									<thead>
-										<th>No</th>
+                                        <th>No.</th>
+										<th>ID Paket</th>
 										<th>Nama Paket</th>
-                                        <th>Berat</th>
-                                        <th>ID Pengiriman</th>
+                                        <th class="text-center">Berat (Kg)</th>
+                                        <th class="text-center">ID Pengiriman</th>
 										<th>
                                             <!-- Tombol Modal Tambah-->
                                             <button type="button" class="btn btn-info btn-sm glyphicon glyphicon-plus" data-toggle="modal" data-target="#ModalTambah"> Tambah</button>
@@ -106,31 +100,24 @@
     <?php echo form_open('DataPaket/store') ?>
                 <fieldset>
                     <div class="form-group">
-                        <label for="Name">Nama Paket :</label>
-                        <input type="text" class="form-control" id="nama" name="nama"
-                            pattern="^[^-\s][a-zA-Z_\s-]{1,50}" required title="Harap diisi dengan huruf"
-                            placeholder="Masukkan nama ...">  
+                        <label for="Nama">Nama Paket :</label>
+                        <input type="text" class="form-control" id="nama_paket" name="nama_paket"
+                            required title="Harap diisi dengan benar" placeholder="Masukkan nama paket ...">
                     </div>
                     <div class="form-group">
-                        <label for="Name">Jenis Kelamin :</label>
-		                <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
-							<option value="Laki - Laki">Laki - Laki</option>
-							<option value="Perempuan">Perempuan</option>
+                        <label for="Berat">Berat (Kg) :</label>
+                        <input type="number" step=0.1 class="form-control" id="berat" name="berat"
+                            pattern="[0-9]{1,15}" required title="Harap diisi dengan angka"
+                            placeholder="Masukkan berat paket ...">
+                    </div>
+                    <div class="form-group">
+                        <label for="ID">ID Pengiriman :</label>
+		                <select class="form-control" id="id_pengiriman" name="id_pengiriman">
+                        <?php foreach ($dataPeng as $dp) { ?>
+                            <option value="<?php echo $dp->id_pengiriman ?>"><?php echo $dp->id_pengiriman ?></option>
+                        <?php } ?>
 						</select>
 		            </div>
-                    <div class="form-group">
-                        <label for="Alamat">Alamat :</label>
-                        <textarea type="text" class="form-control" id="alamat" name="alamat"
-                            pattern="{1,1000}" required title="Harap diisi"
-                            placeholder="Masukkan alamat ...">
-						</textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="hp">No. HP :</label>
-                        <input type="number" class="form-control" id="hp" name="hp"
-                            pattern="[0-9]{1,15}" required title="Harap diisi dengan angka"
-                            placeholder="Masukkan nomer handphone ...">  
-                    </div>
                 </fieldset>
             </div>
             <div class="modal-footer">
@@ -148,18 +135,19 @@
 									</thead>
 <?php if(isset($data)) { ?>
 									<tbody>
-										<?php foreach($data as $row) { ?>
+										<?php $start=0; foreach($data as $row) { ?>
 										<tr>
+                                        <td><?php echo $start+=1 ?></td>
 										<td>
 											<?php echo $row->id_paket ?>
 										</td>
 										<td>
 											<?php echo $row->nama_paket ?>
 										</td>
-                                        <td>
+                                        <td align="right">
 											<?php echo $row->berat ?> kg
 										</td>
-                                        <td>
+                                        <td align="center">
 											<?php echo $row->id_pengiriman ?>
 										</td>
 										<td>
@@ -177,34 +165,28 @@
                 <h4 class="modal-title"><legend>Edit Paket</legend></h4>
             </div>
             <div class="modal-body">
-<?php echo form_open('DataPaket/update/'.$row->id_paket); echo form_hidden('id', $row->id_paket); ?>
+<?php echo form_open('DataPaket/update/'); echo form_hidden('id_paket', $row->id_paket); ?>
                 <fieldset>
                     <div class="form-group">
-                        <label for="Name">Nama Paket :</label>
-                        <input type="text" class="form-control" id="name" name="name"
-                            pattern="^[^-\s][a-zA-Z_\s-]{1,50}" required title="Harap diisi dengan huruf"
-                            placeholder="Masukkan nama ...">  
+                        <label for="Nama">Nama Paket :</label>
+                        <input type="text" class="form-control" id="nama_paket" name="nama_paket"
+                            required title="Harap diisi dengan benar" placeholder="Masukkan nama paket ..."
+                            value="<?php echo $row->nama_paket ?>">
                     </div>
                     <div class="form-group">
-                        <label for="Name">Jenis Kelamin :</label>
-		                <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
-							<option value="Laki - Laki">Laki - Laki</option>
-							<option value="Perempuan">Perempuan</option>
+                        <label for="Berat">Berat (Kg) :</label>
+                        <input type="number" step=0.1 class="form-control" id="berat" name="berat"
+                            pattern="[0-9]{1,15}" required title="Harap diisi dengan angka"
+                            placeholder="Masukkan berat paket ..." value="<?php echo $row->berat ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="ID">ID Pengiriman :</label>
+		                <select class="form-control" id="id_pengiriman" name="id_pengiriman">
+                        <?php foreach ($dataPeng as $dp) { $s=''; if ($dp->id_pengiriman == $row->id_pengiriman) { $s='selected'; } ?>
+                            <option value="<?php echo $dp->id_pengiriman ?>" <?php echo $s ?>><?php echo $dp->id_pengiriman ?></option>
+                        <?php } ?>
 						</select>
 		            </div>
-                    <div class="form-group">
-                        <label for="Alamat">Alamat :</label>
-                        <textarea type="text" class="form-control" id="alamat" name="alamat"
-                            pattern="{1,1000}" required title="Harap diisi"
-                            placeholder="Masukkan alamat ...">  
-                        </textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="hp">No. HP :</label>
-                        <input type="text" class="form-control" id="hp" name="hp"
-                            pattern="[0-9]{1,15}" required title="Harap diisi dengan angka"
-                            placeholder="Masukkan nomer handphone ...">  
-                    </div>
                 </fieldset>
             </div>
             <div class="modal-footer">

@@ -46,11 +46,6 @@
                 	
                     </ul>
 				</div>
-				<div class="sidebar content-box" style="display: block;">
-					<ul class="nav">
-                        <li><a href="<?php echo site_url('admin/report') ?>"><i class="glyphicon glyphicon-book"></i> Laporan</a></li>
-                    </ul>
-				</div>
 			</div>
 
 			<div class="col-md-10">
@@ -66,16 +61,14 @@
 							<div class="panel-body">
                                 <div class="row">
                                     <form class="form-inline" action="<?php echo site_url('DataKategori/show') ?>" method="post">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <label for="Cari">Pencarian : </label>
                                         <select class="form-control" id="kolom" name="kolom">
-                                            <option value="nama">Jenis</option>
+                                            <option value="jenis">Jenis</option>
+                                            <option value="harga">Harga</option>
                                         </select>
                                         <input class="form-control" type="text" id="search" name="search" value="" placeholder="Search...">
                                         <button class="btn btn-default" type="submit" name="tombol" value="filter">Go</button>
-                                    </div>
-									<div class="col-md-6" align="right">
-                                        <button class="btn btn-default" type="submit" name="tombol" value="print"><span class="glyphicon glyphicon-print"></span></button>
                                     </div>
                                     </form>
                                 </div>
@@ -104,14 +97,14 @@
                 <fieldset>
                     <div class="form-group">
                         <label for="Name">Kategori :</label>
-                        <input type="text" class="form-control" id="nama" name="nama"
+                        <input type="text" class="form-control" id="jenis" name="jenis"
                             pattern="^[^-\s][a-zA-Z_\s-]{1,50}" required title="Harap diisi dengan huruf"
                             placeholder="Masukkan kategori ...">  
                     </div>
                     <div class="form-group">
                         <label for="hp">Harga :</label>
                         <input type="text" class="form-control" id="harga" name="harga"
-                            pattern="{1,50}" required title="Harap diisi dengan angka"
+                            pattern="[0-9]{1,15}" required title="Harap diisi dengan angka"
                             placeholder="Masukkan harga ...">  
                     </div>
                 </fieldset>
@@ -120,7 +113,7 @@
                 <button type="submit" class="btn btn-primary" id="tambah">Tambah</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
             </div>
-<?php echo form_close() ?>
+    <?php echo form_close() ?>
         </div>
 
     </div>
@@ -140,7 +133,7 @@
 											<?php echo $row->jenis ?>
 										</td>
                                         <td>
-											Rp.	<?php echo $row->harga ?>,-
+                                            Rp. <?php echo number_format( $row->harga ,0,",","."); ?>,-
 										</td>
 										<td>
                                             <!-- Tombol Modal Ubah-->
@@ -157,21 +150,19 @@
                 <h4 class="modal-title"><legend>Edit Kategori</legend></h4>
             </div>
             <div class="modal-body">
-<?php echo form_open('DataKategori/update/'.$row->id_kategori); echo form_hidden('id', $row->id_kategori); ?>
+<?php echo form_open('DataKategori/update/'); echo form_hidden('id_kategori', $row->id_kategori); ?>
                 <fieldset>
                     <div class="form-group">
                         <label for="Name">Jenis Kategori :</label>
-		                <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
-							<option value="Fast">Fast</option>
-							<option value="Standard">Standard</option>
-                            <option value="Economy">Economy</option>
-						</select>
+		                <input type="text" class="form-control" id="jenis" name="jenis"
+                            pattern="^[^-\s][a-zA-Z_\s-]{1,50}"required title="Harap diisi"
+                            placeholder="Masukkan jenis ..." value="<?php echo $row->jenis ?>">
 		            </div>
                     <div class="form-group">
                         <label for="hp">Harga :</label>
                         <input type="number" class="form-control" id="harga" name="harga"
-                            pattern="" required title="Harap diisi dengan angka"
-                            placeholder="Masukkan harga ...">  
+                            pattern="[0-9]{1,15}" required title="Harap diisi dengan angka"
+                            placeholder="Masukkan harga ..." value="<?php echo $row->harga ?>">
                     </div>
                 </fieldset>
             </div>
